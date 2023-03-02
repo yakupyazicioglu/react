@@ -1,6 +1,6 @@
-# Fabric React
+# Warp React
 
-Reacts components exported under `@fabric-ds/react`.
+React components exported under `@warp-ds/react`.
 
 ## Development
 

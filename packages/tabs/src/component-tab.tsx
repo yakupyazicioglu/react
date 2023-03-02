@@ -54,8 +54,8 @@ export function Tab(props: TabProps) {
       {...rest}
       role="tab"
       aria-selected={isActive ? 'true' : 'false'}
-      aria-controls={isActive ? `fabric-tabpanel-${name}` : undefined}
-      id={`fabric-tab-${name}`}
+      aria-controls={isActive ? `warp-tabpanel-${name}` : undefined}
+      id={`warp-tab-${name}`}
       tabIndex={isActive ? 0 : -1}
       className={tab}
       onClick={handleClick}

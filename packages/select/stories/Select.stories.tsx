@@ -45,11 +45,11 @@ export const noLabel = () => (
       <option>Cloudberries</option>
     </FabricSelect>
 
-    <label id="select-label" htmlFor="fabric-aria-labelledby-example">
+    <label id="select-label" htmlFor="warp-aria-labelledby-example">
       You're berry good at selecting!
     </label>
     <FabricSelect
-      id="fabric-aria-labelledby-example"
+      id="warp-aria-labelledby-example"
       onChange={action('change')}
       onFocus={action('focus')}
       onBlur={action('blur')}

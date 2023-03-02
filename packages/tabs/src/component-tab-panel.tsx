@@ -10,12 +10,12 @@ export function TabPanel(props: TabPanelProps) {
       tabIndex={-1}
       {...rest}
       role="tabpanel"
-      aria-labelledby={`fabric-tab-${name}`}
-      id={`fabric-tabpanel-${name}`}
+      aria-labelledby={`warp-tab-${name}`}
+      id={`warp-tabpanel-${name}`}
       hidden={
         hidden === undefined && typeof document === 'object'
           ? !document
-              ?.getElementById(`fabric-tab-${name}`)
+              ?.getElementById(`warp-tab-${name}`)
               ?.classList?.contains(c.tabActive)
           : hidden
       }
