@@ -40,7 +40,7 @@ await esbuild.build({
   plugins: [eik.plugin()],
   entryPoints: ['packages/index.ts'],
   bundle: true,
-  outfile: `dist/eik/fabric-react-${version}.js`,
+  outfile: `dist/eik/warp-react-${version}.js`,
   format: 'esm',
   sourcemap: true,
   target: 'es2017',
