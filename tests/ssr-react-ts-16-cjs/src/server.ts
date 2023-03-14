@@ -21,7 +21,7 @@ server.get('/', (request, reply) => {
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
-        <title>Fabric React</title>
+        <title>Warp React</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://assets.finn.no/pkg/@fabric-ds/css/v1/fabric.min.css" rel="stylesheet" />
       </head>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, TextArea, Card, Clickable } from '@fabric-ds/react';
+import { Button, TextArea, Card, Clickable } from '@warp-ds/react';
 
 export default function App() {
   const [selected, setSelected] = React.useState(false);

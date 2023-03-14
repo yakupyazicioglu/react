@@ -77,7 +77,7 @@ export function Tabs(props: TabsProps) {
       if (typeof child === 'object') {
         const panel = document.getElementById(
           // @ts-ignore: semantic error
-          `fabric-tabpanel-${child?.props?.name}`,
+          `warp-tabpanel-${child?.props?.name}`,
         );
         if (panel) {
           // @ts-ignore: semantic error

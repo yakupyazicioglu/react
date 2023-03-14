@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { action } from '@storybook/addon-actions';
-import { Select as FabricSelect } from '../src';
+import { Select as WarpSelect } from '../src';
 
 const metadata = { title: 'Forms/Select' };
 export default metadata;
 
 const Select = (props) => (
-  <FabricSelect
+  <WarpSelect
     label="Berries"
     onChange={action('change')}
     onFocus={action('focus')}
@@ -16,7 +16,7 @@ const Select = (props) => (
     <option>Strawberries</option>
     <option>Raspberries</option>
     <option>Cloudberries</option>
-  </FabricSelect>
+  </WarpSelect>
 );
 
 export const standard = () => <Select />;
@@ -34,7 +34,7 @@ export const invalid = () => (
 
 export const noLabel = () => (
   <div className="flex flex-col space-y-32">
-    <FabricSelect
+    <WarpSelect
       onChange={action('change')}
       onFocus={action('focus')}
       onBlur={action('blur')}
@@ -43,13 +43,13 @@ export const noLabel = () => (
       <option>Strawberries</option>
       <option>Raspberries</option>
       <option>Cloudberries</option>
-    </FabricSelect>
+    </WarpSelect>
 
-    <label id="select-label" htmlFor="fabric-aria-labelledby-example">
+    <label id="select-label" htmlFor="warp-aria-labelledby-example">
       You're berry good at selecting!
     </label>
-    <FabricSelect
-      id="fabric-aria-labelledby-example"
+    <WarpSelect
+      id="warp-aria-labelledby-example"
       onChange={action('change')}
       onFocus={action('focus')}
       onBlur={action('blur')}
@@ -58,7 +58,7 @@ export const noLabel = () => (
       <option>Strawberries</option>
       <option>Raspberries</option>
       <option>Cloudberries</option>
-    </FabricSelect>
+    </WarpSelect>
   </div>
 );
 
