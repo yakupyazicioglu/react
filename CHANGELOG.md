@@ -1,3 +1,10 @@
+# [1.0.0-alpha.2](https://github.com/warp-ds/react/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2023-03-27)
+
+
+### Bug Fixes
+
+* **alert:** don't use dynamic classes ([#8](https://github.com/warp-ds/react/issues/8)) ([85a136d](https://github.com/warp-ds/react/commit/85a136d92a381b50ed563109cab3f5c3b191cba9))
+
 # 1.0.0-alpha.1 (2023-03-24)
 
 
