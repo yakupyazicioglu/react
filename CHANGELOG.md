@@ -1,3 +1,10 @@
+# [1.0.0-alpha.3](https://github.com/warp-ds/react/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2023-03-27)
+
+
+### Bug Fixes
+
+* **alert:** use negative and positive variants instead of critical and success ([#9](https://github.com/warp-ds/react/issues/9)) ([82aa7ec](https://github.com/warp-ds/react/commit/82aa7ecc8a0373dd13c75f6e3257b13171375915))
+
 # [1.0.0-alpha.2](https://github.com/warp-ds/react/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2023-03-27)
 
 
