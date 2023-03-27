@@ -15,6 +15,7 @@ module.exports = {
       '@semantic-release/github',
       {
         assets: 'release/*.tgz',
+        "successComment" : false,
       },
     ],
     [
