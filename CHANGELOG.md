@@ -1,3 +1,10 @@
+# [1.0.0-alpha.4](https://github.com/warp-ds/react/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2023-03-29)
+
+
+### Features
+
+* add button styling ([#7](https://github.com/warp-ds/react/issues/7)) ([bf2e9e1](https://github.com/warp-ds/react/commit/bf2e9e15a871c396146b8475d1369f4ba93569f5))
+
 # [1.0.0-alpha.3](https://github.com/warp-ds/react/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2023-03-27)
 
 
