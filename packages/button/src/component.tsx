@@ -1,7 +1,16 @@
 import React, { forwardRef, Ref } from 'react';
+import { button } from '@warp-ds/component-classes';
 import { classNames } from '@chbphone55/classnames';
 import type { ButtonProps } from './props';
 
+const buttonTypes = [    
+  'primary',
+  'secondary',
+  'negative',
+  'utility',
+  'pill',
+  'link',
+] as const;
 export const Button = forwardRef<
   HTMLButtonElement | HTMLAnchorElement,
   ButtonProps
@@ -20,20 +29,22 @@ export const Button = forwardRef<
   } = props;
 
   const classes = classNames(props.className, {
-    button: true,
+    [button.buttonSecondary]: !buttonTypes.find(b => !!props[b]) || secondary,
     // primary buttons
-    'button--primary': primary,
-    'button--destructive': negative,
+    [button.buttonPrimary]: primary,
+    [button.buttonDestructive]: negative && !quiet,
     // quiet
-    'button--flat': secondary && quiet,
-    'button--destructive-flat': negative && quiet,
-    'button--utility-flat': utility && quiet,
+    [button.buttonFlat]: secondary && quiet,
+    [button.buttonDestructiveFlat]: negative && quiet,
+    [button.buttonUtilityFlat]: utility && quiet,
     // others
-    'button--small': small,
-    'button--utility': utility && !quiet,
-    'button--link': link,
-    'button--pill': pill,
-    'button--in-progress': loading,
+    [button.buttonSmall]: small,
+    [button.buttonUtility]: utility && !quiet,
+    [button.buttonLink]: link,
+    [button.buttonPill]: pill,
+    [button.buttonInProgress]: loading,
+    [button.buttonIsDisabled]: props.disabled,
+    ['inline-block']: !!props.href
   });
 
   return (
@@ -42,7 +53,11 @@ export const Button = forwardRef<
         <a
           href={props.href}
           target={props.target}
-          rel={props.target === '_blank' ? props.rel || 'noopener' : undefined}
+          rel={
+            props.target === '_blank'
+              ? props.rel || 'noopener'
+              : undefined
+          }
           ref={ref as Ref<HTMLAnchorElement>}
           className={classes}
         >
