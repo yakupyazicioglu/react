@@ -29,7 +29,7 @@ module.exports = {
 
         config.plugins.push(uno.default({
             presets: [presetWarp({ usePixels: true, usePreflight: true })],
-            safelist: buttonSafelist(),
+            safelist: buttonSafelist,
         }));
         return config;
     },

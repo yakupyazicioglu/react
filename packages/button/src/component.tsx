@@ -29,7 +29,7 @@ export const Button = forwardRef<
   } = props;
 
   const classes = classNames(props.className, {
-    [button.buttonSecondary]: !buttonTypes.find(b => !!props[b]) || secondary,
+    [button.buttonSecondary]: secondary && !quiet || !buttonTypes.find(b => !!props[b]),
     // primary buttons
     [button.buttonPrimary]: primary,
     [button.buttonDestructive]: negative && !quiet,

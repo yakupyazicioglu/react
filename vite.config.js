@@ -15,7 +15,7 @@ export default function config({ mode }) {
     plugins: [
       uno({
         presets: [presetWarp({ usePixels: true, usePreflight: true })],
-        safelist: buttonSafelist(),
+        safelist: buttonSafelist,
       }),
       reactRefresh(),
       mdx.default({
