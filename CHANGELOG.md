@@ -1,3 +1,10 @@
+# [1.0.0-alpha.5](https://github.com/warp-ds/react/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2023-03-29)
+
+
+### Bug Fixes
+
+* add type module ([c96d22c](https://github.com/warp-ds/react/commit/c96d22c0aca54674c6d08cb4d51d1bd43f17dd3b))
+
 # [1.0.0-alpha.4](https://github.com/warp-ds/react/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2023-03-29)
 
 
