@@ -1,3 +1,10 @@
+# [1.0.0-alpha.6](https://github.com/warp-ds/react/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2023-03-30)
+
+
+### Bug Fixes
+
+* add fix for button ([f4527d4](https://github.com/warp-ds/react/commit/f4527d46b6dbaa3bacacb7c5a45682a3b8be4114))
+
 # [1.0.0-alpha.5](https://github.com/warp-ds/react/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2023-03-29)
 
 
