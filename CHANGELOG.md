@@ -1,3 +1,10 @@
+# [1.0.0-alpha.7](https://github.com/warp-ds/react/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2023-03-31)
+
+
+### Bug Fixes
+
+* add common css ([37b6d7e](https://github.com/warp-ds/react/commit/37b6d7e64aa35f7bd67247fb0b47a980bd5b682b))
+
 # [1.0.0-alpha.6](https://github.com/warp-ds/react/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2023-03-30)
 
 
