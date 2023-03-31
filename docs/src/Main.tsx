@@ -30,6 +30,7 @@ import Home from '../pages/index.jsx';
 import Code from './components/Code';
 import PropTable from './components/PropTable';
 import 'uno.css';
+import '@warp-ds/component-classes/common';
 
 const components = {
   code: Code,
