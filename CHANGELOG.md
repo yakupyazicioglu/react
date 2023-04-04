@@ -1,3 +1,10 @@
+# [1.0.0-alpha.8](https://github.com/warp-ds/react/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2023-04-04)
+
+
+### Bug Fixes
+
+* remove common.css and use safelist ([#14](https://github.com/warp-ds/react/issues/14)) ([60c6607](https://github.com/warp-ds/react/commit/60c66078de1aa4d052239a8099b614563b28b164))
+
 # [1.0.0-alpha.7](https://github.com/warp-ds/react/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2023-03-31)
 
 
