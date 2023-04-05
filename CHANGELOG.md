@@ -1,3 +1,10 @@
+# [1.0.0-alpha.9](https://github.com/warp-ds/react/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2023-04-05)
+
+
+### Bug Fixes
+
+* use updated component-classes in alert component ([#15](https://github.com/warp-ds/react/issues/15)) ([b4c1b9a](https://github.com/warp-ds/react/commit/b4c1b9aee106893c6d5dd96550c398248739e09e))
+
 # [1.0.0-alpha.8](https://github.com/warp-ds/react/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2023-04-04)
 
 
