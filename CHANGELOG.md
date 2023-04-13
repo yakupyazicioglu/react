@@ -1,3 +1,10 @@
+# [1.0.0-alpha.10](https://github.com/warp-ds/react/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2023-04-13)
+
+
+### Features
+
+* **workflows:** add eik aliasing script to realease.yml ([#17](https://github.com/warp-ds/react/issues/17)) ([ce4604a](https://github.com/warp-ds/react/commit/ce4604ab134f0e48444222dc384dc824e2cf4ae9))
+
 # [1.0.0-alpha.9](https://github.com/warp-ds/react/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2023-04-05)
 
 
