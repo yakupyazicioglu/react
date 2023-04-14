@@ -1,3 +1,10 @@
+# [1.0.0-alpha.11](https://github.com/warp-ds/react/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2023-04-14)
+
+
+### Bug Fixes
+
+* apply new tokens to textfield and textarea ([#16](https://github.com/warp-ds/react/issues/16)) ([59b3ec8](https://github.com/warp-ds/react/commit/59b3ec822a45b2bea4abeb825a1013b4ec27389f))
+
 # [1.0.0-alpha.10](https://github.com/warp-ds/react/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2023-04-13)
 
 
