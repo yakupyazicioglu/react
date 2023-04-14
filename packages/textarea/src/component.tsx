@@ -1,5 +1,6 @@
-import { classNames } from '@chbphone55/classnames';
 import React, { forwardRef, useRef } from 'react';
+import { classNames } from '@chbphone55/classnames';
+import { input, helpText as h, label as l } from '@warp-ds/component-classes';
 import { useId } from '../../utils/src';
 import { TextAreaProps } from './props';
 import useTextAreaHeight from './useTextAreaHeight';
@@ -41,25 +42,31 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
     return (
       <div
-        className={classNames(className, {
-          'input mb-0': true,
-          'input--is-invalid': isInvalid,
-          'input--is-disabled': disabled,
-          'input--is-read-only': readOnly,
-        })}
+        className={className}
         style={style}
       >
         {label && (
-          <label htmlFor={id}>
+          <label htmlFor={id} className={classNames({
+            [l.label]: true,
+            [l.labelValid]: !isInvalid,
+            [l.labelInvalid]: isInvalid
+          })} >
             {label}
             {optional && (
-              <span className="pl-8 font-normal text-14 text-gray-500">
+              <span className={l.optional}>
                 (valgfritt)
               </span>
             )}
           </label>
         )}
         <textarea
+          className={classNames({
+            [input.default]: true,
+            [input.placeholder]: !!props.placeholder,
+            [input.invalid]: isInvalid,
+            [input.disabled]: disabled,
+            [input.readOnly]: readOnly,
+          })}
           {...rest}
           aria-describedby={helpId}
           aria-errormessage={isInvalid && helpId ? helpId : undefined}
@@ -80,7 +87,12 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           readOnly={readOnly}
           value={value}
         />
-        {helpText && <div className="input__sub-text">{helpText}</div>}
+        {helpText && <div 
+          className={classNames({
+            [h.helpText]: true,
+            [h.helpTextInvalid]: isInvalid
+          })}
+          >{helpText}</div>}
       </div>
     );
   },
