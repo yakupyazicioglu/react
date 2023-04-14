@@ -1,3 +1,10 @@
+# [1.0.0-alpha.12](https://github.com/warp-ds/react/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2023-04-14)
+
+
+### Bug Fixes
+
+* export button, and input components ([#18](https://github.com/warp-ds/react/issues/18)) ([3cc5894](https://github.com/warp-ds/react/commit/3cc589431d324e6f4ce8d2ad3bd5fe05f370d52d))
+
 # [1.0.0-alpha.11](https://github.com/warp-ds/react/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2023-04-14)
 
 
