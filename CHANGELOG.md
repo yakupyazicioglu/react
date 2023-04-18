@@ -1,3 +1,10 @@
+# [1.0.0-alpha.13](https://github.com/warp-ds/react/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2023-04-18)
+
+
+### Bug Fixes
+
+* Add Warp component-classes to the box component ([#19](https://github.com/warp-ds/react/issues/19)) ([e172165](https://github.com/warp-ds/react/commit/e1721656180764b3ec5c5ae41f8ed954adcc7dc4))
+
 # [1.0.0-alpha.12](https://github.com/warp-ds/react/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2023-04-14)
 
 
