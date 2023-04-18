@@ -1,3 +1,10 @@
+# [1.0.0-alpha.14](https://github.com/warp-ds/react/compare/v1.0.0-alpha.13...v1.0.0-alpha.14) (2023-04-18)
+
+
+### Bug Fixes
+
+* add missing classes to textarea and refactor ([#20](https://github.com/warp-ds/react/issues/20)) ([4116c3f](https://github.com/warp-ds/react/commit/4116c3ff40f540695cc4dbfc9e5d7c5b0e3cd89e))
+
 # [1.0.0-alpha.13](https://github.com/warp-ds/react/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2023-04-18)
 
 
