@@ -56,7 +56,7 @@ export function Expandable(props: ExpandableProps) {
           })}
           onClick={() => toggleExpandable(stateExpanded)}
         >
-          <div className='flex justify-between align-center'>
+          <div className="flex justify-between align-center">
             {typeof title === 'string' ? (
               <span className="h4">{title}</span>
             ) : (
