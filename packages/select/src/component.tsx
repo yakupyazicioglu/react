@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { select as ccSelect, label as ccLabel, helpText as ccHelpText } from '@warp-ds/component-classes';
 import { useId } from '../../utils/src';
 import { classNames } from '@chbphone55/classnames';
 import type { SelectProps } from './props';
@@ -13,6 +14,8 @@ const setup = (props) => {
     label,
     style,
     optional,
+    readOnly,
+    disabled,
     ...rest
   } = props;
 
@@ -43,37 +46,74 @@ const setup = (props) => {
             }
           : null,
     },
-    classes: classNames(
-      'input mb-0',
-      {
-        'input--is-invalid': invalid,
-      },
-      className,
-    ),
+    wrapperClasses: classNames({
+      [ccSelect.wrapper]: true,
+      className
+    }),
+    selectClasses:  classNames({
+      [ccSelect.default]: true,
+      [ccSelect.invalid]: invalid,
+      [ccSelect.disabled]: disabled,
+      [ccSelect.readOnly]: readOnly
+    }),
+    selectWrapperClasses: classNames({
+      [ccSelect.selectWrapper]: true,
+    }),
+    helpTextClasses: classNames({
+      [ccHelpText.helpText]: true,
+      [ccHelpText.helpTextInvalid]: invalid
+    }),
+    labelClasses: classNames({
+      [ccLabel.label]: true,
+      [ccLabel.labelInvalid]: invalid
+    }),
+    chevronClasses: classNames({
+      [ccSelect.chevron]: true,
+      [ccSelect.chevronDisabled]: disabled,
+    })
   };
 };
 
 function Select(props: SelectProps, ref: React.Ref<HTMLSelectElement>) {
   const id = useId(props.id);
-  const { attrs, classes } = setup({ ...props, id });
+  const { attrs, wrapperClasses, selectClasses, selectWrapperClasses, helpTextClasses, labelClasses, chevronClasses } = setup({ ...props, id });
   const { div, label, select, help, optional } = attrs;
 
   return (
-    <div className={classes} {...div}>
+    <div className={wrapperClasses} {...div}>
       {label.children && (
-        <label htmlFor={label.htmlFor}>
+        <label htmlFor={label.htmlFor} className={labelClasses}>
           {label.children}
           {optional && (
-            <span className="pl-8 font-normal text-14 text-gray-500">
+            <span className={ccLabel.optional}>
               (valgfritt)
             </span>
           )}
         </label>
       )}
-      <div className="input--select__wrap">
-        <select ref={ref} {...select} />
+      <div className={selectWrapperClasses}>
+        <select ref={ref} {...select} className={selectClasses}/>
+          <div
+            className={classNames(chevronClasses)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="none"
+              viewBox="0 0 16 16"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                d="M2.5 5.5L8 11L13.5 5.5"
+              />
+            </svg>
+          </div>
       </div>
-      {help && <div className="input__sub-text" {...help} />}
+      {help && <div className={helpTextClasses} {...help} />}
     </div>
   );
 }

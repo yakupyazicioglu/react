@@ -1,3 +1,17 @@
+# [1.0.0-alpha.16](https://github.com/warp-ds/react/compare/v1.0.0-alpha.15...v1.0.0-alpha.16) (2023-04-25)
+
+
+### Bug Fixes
+
+* add component classes to Breadcrumbs ([#23](https://github.com/warp-ds/react/issues/23)) ([9818cba](https://github.com/warp-ds/react/commit/9818cbaac6f692fcfc4b01144ab69c2f8357c414))
+
+# [1.0.0-alpha.15](https://github.com/warp-ds/react/compare/v1.0.0-alpha.14...v1.0.0-alpha.15) (2023-04-21)
+
+
+### Bug Fixes
+
+* add component classes to select ([#21](https://github.com/warp-ds/react/issues/21)) ([8a7632c](https://github.com/warp-ds/react/commit/8a7632c520a5992f6ab12560b7761b130014782b))
+
 # [1.0.0-alpha.14](https://github.com/warp-ds/react/compare/v1.0.0-alpha.13...v1.0.0-alpha.14) (2023-04-18)
 
 
