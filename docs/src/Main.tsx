@@ -8,16 +8,16 @@ import {
 } from 'react-router-dom';
 import Alert from '../../packages/alert/docs/Alert.mdx';
 import Breadcrumbs from '../../packages/breadcrumbs/docs/Breadcrumbs.mdx';
-import Button from '../../packages/button/docs/Button.mdx';
-import TextField from '../../packages/textfield/docs/TextField.mdx';
-import TextArea from '../../packages/textarea/docs/TextArea.mdx';
 import Box from '../../packages/box/docs/Box.mdx';
+import Button from '../../packages/button/docs/Button.mdx';
+import Expandable from '../../packages/expandable/docs/Expandable.mdx';
+import TextArea from '../../packages/textarea/docs/TextArea.mdx';
+import TextField from '../../packages/textfield/docs/TextField.mdx';
 
 /*
 import Pill from '../../packages/pill/docs/Pill.mdx';
 import Card from '../../packages/card/docs/Card.mdx';
 import Combobox from '../../packages/combobox/docs/Combobox.mdx';
-import Expandable from '../../packages/expandable/docs/Expandable.mdx';
 import Modal from '../../packages/modal/docs/Modal.mdx';
 import Select from '../../packages/select/docs/Select.mdx';
 import Slider from '../../packages/slider/docs/Slider.mdx';
@@ -72,6 +72,10 @@ const App = () => {
           </Route>
           <Route path="/breadcrumbs">
             <Breadcrumbs />
+          </Route>
+
+          <Route path="/expandable">
+            <Expandable />
           </Route>
 
           {/*
