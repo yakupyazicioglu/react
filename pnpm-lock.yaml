@@ -5,8 +5,8 @@ dependencies:
     specifier: ^2.0.0
     version: 2.0.0
   '@warp-ds/component-classes':
-    specifier: ^1.0.0-alpha.44
-    version: 1.0.0-alpha.44
+    specifier: ^1.0.0-alpha.46
+    version: 1.0.0-alpha.46
   '@warp-ds/core':
     specifier: ^1.0.0
     version: 1.0.0
@@ -4136,8 +4136,8 @@ packages:
       - supports-color
     dev: true
 
-  /@warp-ds/component-classes@1.0.0-alpha.44:
-    resolution: {integrity: sha512-rGGJhi7VsezeDg25zrrkA7R6y/0/zKzr5iaYsPTPPFlzcVnbbEil8rnmBr5eOjVXUXp9Wz7f3eVyS68N5jiooA==}
+  /@warp-ds/component-classes@1.0.0-alpha.46:
+    resolution: {integrity: sha512-CqlPORtneM/eijcGXObwiVxav2Nkp8PdHeNmtXYe4ojcFYEqDGSlWz5U2/je242OggpOrhLrSjIHHxNhICjxZA==}
     dev: false
 
   /@warp-ds/core@1.0.0:
