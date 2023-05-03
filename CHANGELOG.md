@@ -1,3 +1,15 @@
+# [1.0.0-alpha.18](https://github.com/warp-ds/react/compare/v1.0.0-alpha.17...v1.0.0-alpha.18) (2023-05-03)
+
+
+### Bug Fixes
+
+* **stepsindicator:** update version of @warp-ds/component-classes ([09d9022](https://github.com/warp-ds/react/commit/09d902294507425d3c9b5a3041dc4a3fb0275319))
+
+
+### Features
+
+* **stepindicator:** add component classes for stepindicator ([6de4822](https://github.com/warp-ds/react/commit/6de482273382b142e18af7a536a0c7f5f9ded7bf))
+
 # [1.0.0-alpha.17](https://github.com/warp-ds/react/compare/v1.0.0-alpha.16...v1.0.0-alpha.17) (2023-04-25)
 
 
