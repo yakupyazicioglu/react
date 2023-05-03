@@ -53,7 +53,7 @@ export function Item({
     checkboxRef.current.indeterminate = indeterminate;
   }, [indeterminate, checkboxRef]);
 
-  const Item = (
+return (
     <>
       <input
         ref={checkboxRef}
@@ -84,11 +84,4 @@ export function Item({
       </label>
     </>
   );
-console.log({multiple  })
-  // if (multiple ) {
-    return <div className='group'>{Item}</div>
-  // }
-
-  // return Item;
-
 }

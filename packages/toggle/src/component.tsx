@@ -4,6 +4,7 @@ import { useId } from '../../utils/src';
 import { ToggleEntry, ToggleProps } from './props';
 import { classNames } from '@chbphone55/classnames';
 import { Item } from './item';
+import { ButtonGroupItem } from './button-group-item';
 
 function Title({ id, isInvalid, title, optional }) {
   return (
@@ -53,7 +54,7 @@ export function Toggle(props: ToggleProps) {
     input: 'sr-only peer',
     inputDisabled: 'pointer-events-none',
     focusable: 'peer-focus:focusable:focus peer-focus-visible:focusable:focus-visible peer-not-focus-visible:focusable:focus:not(:focus-visible)',
-    focusableWithin: 'focus-within:focusable:focus focus-within:focusable:focus-visible',
+    focusableWithin: 'focusable-inset focus-within:focusable:focus focus-within:focusable:focus-visible',
     label: `cursor-pointer text-16 i-text-$color-label-text py-2 pl-28 select-none relative block before:block before:border before:i-border-$color-checkbox-border before:absolute before:transition-all before:left-0 before:w-20 before:h-20 before:top-2`,
     noContent: `before:content-['']`,
     indeterminate: `before:i-text-$color-text-inverted before:text-center before:font-bold before:content-['–'] peer-indeterminate:before:i-border-$color-checkbox-border-active peer-indeterminate:before:i-bg-$color-checkbox-background-active peer-indeterminate:hover:before:i-border-$color-checkbox-border-hover peer-indeterminate:hover:before:i-bg-$color-checkbox-background-active-hover`,
@@ -72,6 +73,21 @@ export function Toggle(props: ToggleProps) {
     icon: `peer-checked:before:bg-center before:bg-[var(--x-form-check-mark)]`
  };
 
+ const ccButtonGroup = {
+  wrapper: 'rounded-8 overflow-hidden',
+  defaultDisplay: 'inline-flex',
+  equalWidthDisplay: 'flex',
+  label: 'block relative text-14 font-bold cursor-pointer py-10 px-14 text-center',
+  labelSmall: 'text-12 py-[5px]! px-[8px]!'
+}
+
+const buttonGroupWrapper = classNames([ccButtonGroup.wrapper, props.equalWidth ? ccButtonGroup.equalWidthDisplay : ccButtonGroup.defaultDisplay])
+
+const buttonGroupLabel = classNames({
+  [ccButtonGroup.label]: true,
+  [ccButtonGroup.labelSmall]: props.small,
+})
+
   const labelClasses = 
     classNames({
       [toggle.label]: !isRadioButton,
@@ -89,6 +105,7 @@ export function Toggle(props: ToggleProps) {
   const inputClasses = 
     classNames({
       [toggle.input]: true,
+      'focusable-inset': isRadioButton
     });
 
   return (
@@ -110,7 +127,7 @@ export function Toggle(props: ToggleProps) {
       <div
         className={classNames(props.className, {
           [toggle.wrapper]: true,
-          [toggle.segmentControl + " " + toggle.focusableWithin]: isRadioButton,
+          [buttonGroupWrapper + " " + toggle.focusableWithin]: isRadioButton,
           [toggle.scJustified]: props.equalWidth,
         })}
       >
@@ -135,25 +152,25 @@ export function Toggle(props: ToggleProps) {
         ) : (
           props.options &&
           props.options.map((option, i) => (
-            <Item
-              controlled={isControlled}
-              checked={props.selected?.some((s) => s.value === option.value)}
-              defaultChecked={props.defaultSelected?.some(
-                (s) => s.value === option.value,
-              )}
-              inputClassName={inputClasses}
-              labelClassName={labelClasses}  
-              option={option}
-              // @ts-ignore TODO: typecheck
-              onChange={(e: ToggleEntry) => props.onChange(e)}
-              name={`${id}:toggle`}
-              key={`${id + i + props.type}`}
-              invalid={isInvalid}
-              helpId={helpId}
-              type={isRadioGroup ? 'radio' : 'checkbox'}
-              noVisibleLabel={props.noVisibleLabel}
-              multiple={!isRadioButton}
-            />
+            <ButtonGroupItem key={`${id + i + props.type}`} equalWidth={props.equalWidth} selected={props.selected?.some((s) => s.value === option.value)}>
+              <Item
+                controlled={isControlled}
+                checked={props.selected?.some((s) => s.value === option.value)}
+                defaultChecked={props.defaultSelected?.some(
+                  (s) => s.value === option.value,
+                )}
+                option={option}
+                // @ts-ignore TODO: typecheck
+                onChange={(e: ToggleEntry) => props.onChange(e)}
+                name={`${id}:toggle`}
+                labelClassName={buttonGroupLabel}
+                inputClassName={inputClasses}
+                invalid={isInvalid}
+                helpId={helpId}
+                type={isRadioGroup ? 'radio' : 'checkbox'}
+                noVisibleLabel={props.noVisibleLabel}
+              />
+            </ButtonGroupItem>
           ))
         )}
       </div>
