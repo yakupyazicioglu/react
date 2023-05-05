@@ -1,3 +1,11 @@
+# [1.0.0-alpha.20](https://github.com/warp-ds/react/compare/v1.0.0-alpha.19...v1.0.0-alpha.20) (2023-05-05)
+
+
+### Bug Fixes
+
+* fix broken docs after vite upgrade ([#29](https://github.com/warp-ds/react/issues/29)) ([6f65554](https://github.com/warp-ds/react/commit/6f6555462ef199054cebc135c4270e2564bdcb63))
+* **index.ts:** export expandable, box and select from packages/index.ts ([#30](https://github.com/warp-ds/react/issues/30)) ([7b1e21c](https://github.com/warp-ds/react/commit/7b1e21ce8af2c34190890f9a3f8256fd6d2f0dc0))
+
 # [1.0.0-alpha.19](https://github.com/warp-ds/react/compare/v1.0.0-alpha.18...v1.0.0-alpha.19) (2023-05-05)
 
 
