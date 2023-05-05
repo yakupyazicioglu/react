@@ -1,3 +1,10 @@
+# [1.0.0-alpha.21](https://github.com/warp-ds/react/compare/v1.0.0-alpha.20...v1.0.0-alpha.21) (2023-05-05)
+
+
+### Bug Fixes
+
+* Add Warp component-classes to the Pill component ([#28](https://github.com/warp-ds/react/issues/28)) ([0db49ac](https://github.com/warp-ds/react/commit/0db49acbb6774c9d047f4ae09c72b7ac13faece6))
+
 # [1.0.0-alpha.20](https://github.com/warp-ds/react/compare/v1.0.0-alpha.19...v1.0.0-alpha.20) (2023-05-05)
 
 
