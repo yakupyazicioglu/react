@@ -1,3 +1,10 @@
+# [1.0.0-alpha.22](https://github.com/warp-ds/react/compare/v1.0.0-alpha.21...v1.0.0-alpha.22) (2023-05-08)
+
+
+### Bug Fixes
+
+* classes for toggle ([#26](https://github.com/warp-ds/react/issues/26)) ([65211a7](https://github.com/warp-ds/react/commit/65211a79049078e60bc8204b330c1cf431f3de6b))
+
 # [1.0.0-alpha.21](https://github.com/warp-ds/react/compare/v1.0.0-alpha.20...v1.0.0-alpha.21) (2023-05-05)
 
 
