@@ -1,3 +1,10 @@
+# [1.0.0-alpha.23](https://github.com/warp-ds/react/compare/v1.0.0-alpha.22...v1.0.0-alpha.23) (2023-05-10)
+
+
+### Bug Fixes
+
+* radio buttons classes ([#31](https://github.com/warp-ds/react/issues/31)) ([3a5ca84](https://github.com/warp-ds/react/commit/3a5ca843e842b28b5130602cc0c36bf8ee003ffb))
+
 # [1.0.0-alpha.22](https://github.com/warp-ds/react/compare/v1.0.0-alpha.21...v1.0.0-alpha.22) (2023-05-08)
 
 
