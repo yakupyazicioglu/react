@@ -1,3 +1,10 @@
+# [1.0.0-alpha.26](https://github.com/warp-ds/react/compare/v1.0.0-alpha.25...v1.0.0-alpha.26) (2023-06-07)
+
+
+### Bug Fixes
+
+* bump packages ([#43](https://github.com/warp-ds/react/issues/43)) ([5e064e7](https://github.com/warp-ds/react/commit/5e064e7a75255ab3efb05742e5e94d471a1ab849))
+
 # [1.0.0-alpha.25](https://github.com/warp-ds/react/compare/v1.0.0-alpha.24...v1.0.0-alpha.25) (2023-06-01)
 
 
