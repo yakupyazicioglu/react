@@ -44,7 +44,7 @@ export const Button = forwardRef<
     [ccButton.buttonPill]: pill,
     [ccButton.buttonInProgress]: loading,
     [ccButton.buttonIsDisabled]: props.disabled,
-    [ccButton.linkAsButton]: !!props.href,
+    [ccButton.linkAsButton]: props.href && !props.link,
   });
 
   return (

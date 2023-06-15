@@ -145,8 +145,8 @@ export const Example = () => {
       <div>
         <h3>Link</h3>
         {/* @ts-ignore */}
-        <Button className="mr-32" link>
-          Simple
+        <Button className="mr-32" link href="test-com">
+          Simple LINK with href
         </Button>
         {/* @ts-ignore */}
         <Button className="mr-32" link small>
