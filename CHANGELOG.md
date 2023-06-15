@@ -1,3 +1,10 @@
+# [1.0.0-alpha.29](https://github.com/warp-ds/react/compare/v1.0.0-alpha.28...v1.0.0-alpha.29) (2023-06-15)
+
+
+### Bug Fixes
+
+* **components:** update component classes ([#49](https://github.com/warp-ds/react/issues/49)) ([7a445d2](https://github.com/warp-ds/react/commit/7a445d2b97c7738da7811d85eda6ac0962ca1d44))
+
 # [1.0.0-alpha.28](https://github.com/warp-ds/react/compare/v1.0.0-alpha.27...v1.0.0-alpha.28) (2023-06-14)
 
 
