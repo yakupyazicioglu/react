@@ -1,3 +1,10 @@
+# [1.0.0-alpha.30](https://github.com/warp-ds/react/compare/v1.0.0-alpha.29...v1.0.0-alpha.30) (2023-06-16)
+
+
+### Bug Fixes
+
+* **packages:** use className and style in TextField and Select ([#50](https://github.com/warp-ds/react/issues/50)) ([fdfe96a](https://github.com/warp-ds/react/commit/fdfe96ae0bc23d0e738682b033b282451f6eaf5d))
+
 # [1.0.0-alpha.29](https://github.com/warp-ds/react/compare/v1.0.0-alpha.28...v1.0.0-alpha.29) (2023-06-15)
 
 
