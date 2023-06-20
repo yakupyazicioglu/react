@@ -1,3 +1,10 @@
+# [1.0.0-alpha.31](https://github.com/warp-ds/react/compare/v1.0.0-alpha.30...v1.0.0-alpha.31) (2023-06-20)
+
+
+### Bug Fixes
+
+* remove background from checkbox/toggle ([#51](https://github.com/warp-ds/react/issues/51)) ([f0eba8e](https://github.com/warp-ds/react/commit/f0eba8ee713333f5df2be3514f38d49710649d71))
+
 # [1.0.0-alpha.30](https://github.com/warp-ds/react/compare/v1.0.0-alpha.29...v1.0.0-alpha.30) (2023-06-16)
 
 
