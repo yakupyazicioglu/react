@@ -1,3 +1,10 @@
+# [1.0.0-alpha.32](https://github.com/warp-ds/react/compare/v1.0.0-alpha.31...v1.0.0-alpha.32) (2023-06-21)
+
+
+### Bug Fixes
+
+* build storybook with vite instead of webpack ([#44](https://github.com/warp-ds/react/issues/44)) ([f569d2a](https://github.com/warp-ds/react/commit/f569d2a0de114975c0e22573377492eebf2825c3))
+
 # [1.0.0-alpha.31](https://github.com/warp-ds/react/compare/v1.0.0-alpha.30...v1.0.0-alpha.31) (2023-06-20)
 
 
