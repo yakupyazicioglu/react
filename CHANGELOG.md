@@ -1,3 +1,10 @@
+# [1.0.0-alpha.33](https://github.com/warp-ds/react/compare/v1.0.0-alpha.32...v1.0.0-alpha.33) (2023-06-30)
+
+
+### Bug Fixes
+
+* use correct padding for small buttons ([a054d29](https://github.com/warp-ds/react/commit/a054d2960b9e83125bd8c54196d3dfbbef64a3be))
+
 # [1.0.0-alpha.32](https://github.com/warp-ds/react/compare/v1.0.0-alpha.31...v1.0.0-alpha.32) (2023-06-21)
 
 
