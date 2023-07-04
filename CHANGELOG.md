@@ -1,3 +1,10 @@
+# [1.0.0-alpha.34](https://github.com/warp-ds/react/compare/v1.0.0-alpha.33...v1.0.0-alpha.34) (2023-07-04)
+
+
+### Bug Fixes
+
+* secondary button prop is not true by default ([#56](https://github.com/warp-ds/react/issues/56)) ([d82680a](https://github.com/warp-ds/react/commit/d82680a8a3eae31fff61bff8a400eefc7a4a2711))
+
 # [1.0.0-alpha.33](https://github.com/warp-ds/react/compare/v1.0.0-alpha.32...v1.0.0-alpha.33) (2023-06-30)
 
 
