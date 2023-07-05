@@ -1,3 +1,10 @@
+# [1.0.0-alpha.35](https://github.com/warp-ds/react/compare/v1.0.0-alpha.34...v1.0.0-alpha.35) (2023-07-05)
+
+
+### Bug Fixes
+
+* add placeholder to texarea ([cebd307](https://github.com/warp-ds/react/commit/cebd307d80b9bae6493d112709675b208236b27a))
+
 # [1.0.0-alpha.34](https://github.com/warp-ds/react/compare/v1.0.0-alpha.33...v1.0.0-alpha.34) (2023-07-04)
 
 
