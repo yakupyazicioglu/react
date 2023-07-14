@@ -1,3 +1,11 @@
+# [1.0.0-alpha.38](https://github.com/warp-ds/react/compare/v1.0.0-alpha.37...v1.0.0-alpha.38) (2023-07-14)
+
+
+### Bug Fixes
+
+* trigger release of 1.0.0-alpha.38 ([a275d63](https://github.com/warp-ds/react/commit/a275d639fb1a528438e4f1b7f9c0f9a5a2a3e55b))
+* use css packages instead of component-classes ([#55](https://github.com/warp-ds/react/issues/55)) ([64d45d3](https://github.com/warp-ds/react/commit/64d45d31872d7d13e52a0c91cf80ff949ecd4c33))
+
 # [1.0.0-alpha.37](https://github.com/warp-ds/react/compare/v1.0.0-alpha.36...v1.0.0-alpha.37) (2023-07-10)
 
 
