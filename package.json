@@ -40,7 +40,9 @@
     "lint": "pnpm run lint:format && pnpm run lint:eslint",
     "lint:eslint": "eslint . --ext ts,tsx,js,jsx,cjs --max-warnings 0 --ignore-path .gitignore",
     "lint:format": "prettier --check . --ignore-path .gitignore",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "messages:extract": "lingui extract",
+    "messages:compile": "lingui compile"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -51,6 +53,8 @@
     "@eik/cli": "^2.0.22",
     "@eik/esbuild-plugin": "^1.1.0",
     "@fabric-ds/icons": "0.5.1",
+    "@lingui/cli": "^4.3.0",
+    "@lingui/conf": "^4.3.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "1.6.22",
     "@semantic-release/changelog": "^6.0.1",
@@ -102,7 +106,9 @@
   "dependencies": {
     "@chbphone55/classnames": "^2.0.0",
     "@warp-ds/css": "^1.0.0-alpha.37",
+    "@lingui/core": "^4.3.0",
     "@warp-ds/core": "^1.0.0",
+    "@warp-ds/css": "^1.0.0-alpha.33",
     "@warp-ds/uno": "^1.0.0-alpha.60",
     "react-focus-lock": "^2.5.2",
     "resize-observer-polyfill": "^1.5.1",

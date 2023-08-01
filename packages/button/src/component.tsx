@@ -1,7 +1,9 @@
 import React, { forwardRef, Ref } from 'react';
 import { button as ccButton } from '@warp-ds/css/component-classes';
+import { i18n } from '@lingui/core';
 import { classNames } from '@chbphone55/classnames';
 import type { ButtonProps } from './props';
+import { useI18n } from '../../utils/src';
 
 const buttonTypes = [    
   'primary',
@@ -49,6 +51,15 @@ export const Button = forwardRef<
     [ccButton.linkAsButton]: !!props.href,
   });
 
+  useI18n('button');
+
+  const ariaValueTextLoading = i18n._(
+    /*i18n*/ {
+      id: 'button.aria.loading',
+      message: 'Loading...',
+      comment: 'Screenreader message for buttons that are loading',
+    });
+
   return (
     <>
       {props.href ? (
@@ -80,7 +91,7 @@ export const Button = forwardRef<
           className="sr-only"
           role="progressbar"
           aria-valuenow={0}
-          aria-valuetext="Laster..."
+          aria-valuetext={ariaValueTextLoading}
         />
       ) : null}
     </>
