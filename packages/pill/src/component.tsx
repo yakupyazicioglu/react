@@ -2,8 +2,11 @@ import React from 'react';
 import { classNames } from '@chbphone55/classnames';
 import { PillProps } from '.';
 import { pill as ccPill } from '@warp-ds/css/component-classes';
+import { useI18n } from '../../utils/src';
+import { i18n } from '@lingui/core';
 
 export function Pill(props: PillProps) {
+  useI18n('pill');
   return (
     <div className={ccPill.pill}>
       <button
@@ -30,7 +33,16 @@ export function Pill(props: PillProps) {
           onClick={props.onClose}
         >
           <span className={ccPill.a11y}>
-            {props.closeSRLabel || `Fjern filter ${props.label}`}
+            {props.closeSRLabel ||
+              i18n._(
+                /*i18n*/ {
+                  id: 'pill.aria.removeFilter',
+                  message: 'Remove filter {label}',
+                  comment:
+                    'Fallback screenreader message for removal of the filter',
+                  values: { label: props.label }
+                },
+              )}
           </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -1,10 +1,11 @@
 import { classNames } from '@chbphone55/classnames';
 import { modal as ccModal } from '@warp-ds/css/component-classes';
 import React, { useEffect, useRef } from 'react';
-import { useId } from '../../utils/src';
+import { useI18n, useId } from '../../utils/src';
 import FocusLock from 'react-focus-lock';
 import { ModalProps } from './props';
 import { setup, teardown } from 'scroll-doctor';
+import { i18n } from '@lingui/core';
 
 /**
  * A Modal dialog that renders on top the page
@@ -16,7 +17,9 @@ export const Modal = ({
 }: ModalProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const id = useId(props.id);
-  
+
+  useI18n('modal');
+
   useEffect(() => {
     teardown();
     if (!contentRef.current) return;
@@ -62,7 +65,13 @@ export const Modal = ({
             {typeof props.left === 'boolean' && props.left ? (
               <button
                 type="button"
-                aria-label="Tilbake"
+                aria-label={i18n._(
+                  /*i18n*/ {
+                    id: 'modal.aria.back',
+                    message: 'Back',
+                    comment: 'Aria label for the back button in modal',
+                  },
+                )}
                 className={classNames(
                   ccModal.transitionTitle,
                   ccModal.titleButton,
@@ -106,7 +115,13 @@ export const Modal = ({
             {typeof props.right === 'boolean' && props.right ? (
               <button
                 type="button"
-                aria-label="Lukk"
+                aria-label={i18n._(
+                  /*i18n*/ {
+                    id: 'modal.aria.close',
+                    message: 'Close',
+                    comment: 'Aria label for the close button in modal',
+                  },
+                )}
                 onClick={props.onDismiss}
                 className={classNames(
                   ccModal.transitionTitle,

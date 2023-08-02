@@ -1,7 +1,8 @@
 import React, { forwardRef, useRef } from 'react';
+import { i18n } from '@lingui/core';
 import { classNames } from '@chbphone55/classnames';
 import { input as ccInput, label as ccLabel, helpText as ccHelpText } from '@warp-ds/css/component-classes';
-import { useId } from '../../utils/src';
+import { useI18n, useId } from '../../utils/src';
 import { TextAreaProps } from './props';
 import useTextAreaHeight from './useTextAreaHeight';
 
@@ -27,6 +28,8 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       placeholder,
       ...rest
     } = props;
+
+    useI18n('textarea');
 
     const id = useId(providedId);
     const ref = useRef<HTMLTextAreaElement | null>(null);
@@ -54,7 +57,13 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
             {label}
             {optional && (
               <span className={ccLabel.optional}>
-                (valgfritt)
+                {i18n._(
+                  /*i18n*/ {
+                    id: 'textarea.label.optional',
+                    message: '(optional)',
+                    comment: 'Shown behind label when marked as optional',
+                  },
+                )}
               </span>
             )}
           </label>
