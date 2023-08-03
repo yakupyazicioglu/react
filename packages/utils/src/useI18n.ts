@@ -2,11 +2,20 @@ import { useEffect, useState } from 'react';
 import { dynamicActivateI18n } from './dynamicActivatei18n';
 
 function detectLocale() {
+  const supportedLocales = ['en', 'nb'];
+  const defaultLocale = 'en';
   try {
-    return document.documentElement.lang;
+    const htmlLocale = document.documentElement.lang;
+
+    return (
+      supportedLocales.find(
+        (locale) =>
+          htmlLocale === locale || htmlLocale.toLowerCase().includes(locale)
+      ) || defaultLocale
+    );
   } catch (e) {
     console.warn('could not detect locale, falling back to source locale', e);
-    return 'en';
+    return defaultLocale;
   }
 }
 
