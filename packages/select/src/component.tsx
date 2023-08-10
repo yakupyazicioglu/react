@@ -92,7 +92,6 @@ function Select(props: SelectProps, ref: React.Ref<HTMLSelectElement>) {
         <select ref={ref} {...select} className={selectClasses}/>
           <div
             className={classNames(chevronClasses)}
-            style={{ pointerEvents: 'none', cursor: 'pointer' }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
