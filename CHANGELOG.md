@@ -1,3 +1,10 @@
+# [1.0.0-alpha.40](https://github.com/warp-ds/react/compare/v1.0.0-alpha.39...v1.0.0-alpha.40) (2023-08-10)
+
+
+### Bug Fixes
+
+* bump @warp-ds/css package to get fix for select chevron component class ([0cb53a2](https://github.com/warp-ds/react/commit/0cb53a2d3137aad02443c482830cb090e71134d7))
+
 # [1.0.0-alpha.39](https://github.com/warp-ds/react/compare/v1.0.0-alpha.38...v1.0.0-alpha.39) (2023-08-01)
 
 
