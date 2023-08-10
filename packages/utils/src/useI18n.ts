@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { dynamicActivateI18n } from './dynamicActivatei18n';
 
 function detectLocale() {
-  const supportedLocales = ['en', 'nb'];
+  const supportedLocales = ['en', 'nb', 'fi'];
   const defaultLocale = 'en';
   try {
     const htmlLocale = document.documentElement.lang;
