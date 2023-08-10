@@ -15,7 +15,7 @@ dependencies:
     specifier: ^1.0.0
     version: 1.0.0
   '@warp-ds/css':
-    specifier: ^1.0.0-alpha.33
+    specifier: ^1.0.0-alpha.37
     version: 1.0.0-alpha.37
   '@warp-ds/uno':
     specifier: ^1.0.0-alpha.60

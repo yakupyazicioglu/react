@@ -108,7 +108,6 @@
     "@warp-ds/css": "^1.0.0-alpha.37",
     "@lingui/core": "^4.3.0",
     "@warp-ds/core": "^1.0.0",
-    "@warp-ds/css": "^1.0.0-alpha.33",
     "@warp-ds/uno": "^1.0.0-alpha.60",
     "react-focus-lock": "^2.5.2",
     "resize-observer-polyfill": "^1.5.1",
