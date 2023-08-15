@@ -9,7 +9,9 @@ function detectLocale() {
     /**
      * Server locale detection. This requires e.g LANG environment variable to be set on the server.
      */
-    return Intl.DateTimeFormat().resolvedOptions().locale;
+    return (
+      process.env.NMP_LANGUAGE || Intl.DateTimeFormat().resolvedOptions().locale
+    );
   }
 
   try {
