@@ -4,6 +4,14 @@ import { dynamicActivateI18n } from './dynamicActivatei18n';
 function detectLocale() {
   const supportedLocales = ['en', 'nb', 'fi'];
   const defaultLocale = 'en';
+
+  if (typeof window === 'undefined') {
+    /**
+     * Server locale detection. This requires e.g LANG environment variable to be set on the server.
+     */
+    return Intl.DateTimeFormat().resolvedOptions().locale;
+  }
+
   try {
     const htmlLocale = document.documentElement.lang;
 
