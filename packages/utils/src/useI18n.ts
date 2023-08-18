@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { dynamicActivateI18n } from './dynamicActivatei18n';
+import { supportedLocales } from '../../i18n';
 
 function detectLocale() {
-  const supportedLocales = ['en', 'nb', 'fi'];
   const defaultLocale = 'en';
 
   if (typeof window === 'undefined') {

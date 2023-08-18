@@ -1,7 +1,8 @@
 import type { LinguiConfig } from '@lingui/conf';
+import { supportedLocales } from './packages/i18n';
 
 const config: LinguiConfig = {
-  locales: ['en', 'nb', 'fi'],
+  locales: supportedLocales,
   catalogs: [
     {
       include: ['packages/breadcrumbs/src/**/*.{ts,tsx}'],
