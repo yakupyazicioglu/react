@@ -1,1 +1,1 @@
-/*eslint-disable*/export const messages=JSON.parse("{\"pill.aria.removeFilter\":[\"Tyhjennä suodatin \",[\"label\"]]}");
+/*eslint-disable*/export const messages=JSON.parse("{\"pill.aria.openFilter\":\"Avaa suodatin\",\"pill.aria.removeFilter\":[\"Tyhjennä suodatin \",[\"label\"]]}");

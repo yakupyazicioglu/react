@@ -3,12 +3,15 @@ import type { BreadcrumbsProps } from './props';
 import { interleave } from '@warp-ds/core/breadcrumbs';
 import { breadcrumbs as ccBreadcrumbs } from "@warp-ds/css/component-classes";
 import { i18n } from '@lingui/core';
-import { useI18n } from '../../utils/src';
+import { messages as enMessages} from './locales/en/messages.mjs';
+import { messages as nbMessages} from './locales/nb/messages.mjs';
+import { messages as fiMessages} from './locales/fi/messages.mjs';
+import { activateI18n } from '../../i18n';
 
 export const Breadcrumbs = (props: BreadcrumbsProps) => {
   const { children, className, ...rest } = props;
 
-  useI18n('breadcrumbs');
+  activateI18n(enMessages, nbMessages, fiMessages);
 
   const ariaLabel = props['aria-label'] || i18n._(
     /*i18n*/ {

@@ -13,9 +13,13 @@ import React, {
 } from 'react';
 import { combobox as ccCombobox } from '@warp-ds/css/component-classes';
 import { TextField } from '../../textfield/src';
-import { useI18n, useId } from '../../utils/src';
+import { useId } from '../../utils/src';
 import { ComboboxProps, OptionWithIdAndMatch } from './props';
 import { createOptionsWithIdAndMatch, getAriaText } from './utils';
+import { messages as enMessages} from './locales/en/messages.mjs';
+import { messages as nbMessages} from './locales/nb/messages.mjs';
+import { messages as fiMessages} from './locales/fi/messages.mjs';
+import { activateI18n } from '../../i18n';
 
 const OPTION_CLASS_NAME = 'w-react-combobox-option';
 const MATCH_SEGMENTS_CLASS_NAME = 'w-react-combobox-match';
@@ -28,7 +32,7 @@ export const Combobox = forwardRef<HTMLInputElement, ComboboxProps>(
     const inputContainerRef = useRef<HTMLDivElement | null>(null);
     const containerRef = useRef<HTMLDivElement | null>(null);
 
-    useI18n('combobox');
+    activateI18n(enMessages, nbMessages, fiMessages);
 
     // Options list open boolean
     const [isOpen, setOpen] = useState(false);

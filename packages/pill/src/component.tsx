@@ -2,11 +2,14 @@ import React from 'react';
 import { classNames } from '@chbphone55/classnames';
 import { PillProps } from '.';
 import { pill as ccPill } from '@warp-ds/css/component-classes';
-import { useI18n } from '../../utils/src';
 import { i18n } from '@lingui/core';
+import { messages as nbMessages} from './locales/nb/messages.mjs';
+import { messages as enMessages} from './locales/en/messages.mjs';
+import { messages as fiMessages} from './locales/fi/messages.mjs';
+import { activateI18n } from '../../i18n';
 
 export function Pill(props: PillProps) {
-  useI18n('pill');
+  activateI18n(enMessages, nbMessages, fiMessages);
   return (
     <div className={ccPill.pill}>
       <button
@@ -19,7 +22,19 @@ export function Pill(props: PillProps) {
           [props.canClose ? ccPill.labelWithClose : ccPill.labelWithoutClose]: true,
         })}
       >
-        <span className={ccPill.a11y}>{props.openSRLabel || 'Åpne filter'}</span>
+        <span className={ccPill.a11y}>
+          {props.openSRLabel ||
+            i18n._(
+              /*i18n*/ {
+                id: 'pill.aria.openFilter',
+                message: 'Open filter',
+                comment:
+                  'Fallback screenreader message for open filter',
+                values: { label: props.label }
+              },
+            )
+          }
+        </span>
         {props.icon || <span>{props.label}</span>}
       </button>
       {props.canClose && (

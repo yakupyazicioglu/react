@@ -1,11 +1,15 @@
 import { classNames } from '@chbphone55/classnames';
 import { modal as ccModal } from '@warp-ds/css/component-classes';
 import React, { useEffect, useRef } from 'react';
-import { useI18n, useId } from '../../utils/src';
+import { useId } from '../../utils/src';
 import FocusLock from 'react-focus-lock';
 import { ModalProps } from './props';
 import { setup, teardown } from 'scroll-doctor';
 import { i18n } from '@lingui/core';
+import { messages as nbMessages} from './locales/nb/messages.mjs';
+import { messages as enMessages} from './locales/en/messages.mjs';
+import { messages as fiMessages} from './locales/fi/messages.mjs';
+import { activateI18n } from '../../i18n';
 
 /**
  * A Modal dialog that renders on top the page
@@ -18,7 +22,7 @@ export const Modal = ({
   const contentRef = useRef<HTMLDivElement>(null);
   const id = useId(props.id);
 
-  useI18n('modal');
+  activateI18n(enMessages, nbMessages, fiMessages);
 
   useEffect(() => {
     teardown();
