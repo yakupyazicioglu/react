@@ -18,7 +18,7 @@ export const Example = () => {
         </Button>
         {/* @ts-ignore */}
         <Button className="mr-32" primary loading>
-          Loading
+          Loading test
         </Button>
         {/* @ts-ignore */}
         <Button className="mr-32" primary small>
@@ -130,12 +130,20 @@ export const Example = () => {
         <Button className="mr-32" utility quiet>
           Quiet
         </Button>
+        {/* @ts-ignore */}
+        <Button className="mr-32" utility quiet small>
+          Quiet small
+        </Button>
       </div>
       <div>
         <h3>Pill</h3>
         {/* @ts-ignore */}
         <Button className="mr-32" pill>
-          Simple
+          Simple pill
+        </Button>
+        {/* @ts-ignore */}
+        <Button className="mr-32" pill small>
+          Simple small pill
         </Button>
         {/* @ts-ignore */}
         <Button className="mr-32" pill loading>
@@ -150,7 +158,7 @@ export const Example = () => {
         </Button>
         {/* @ts-ignore */}
         <Button className="mr-32" link small>
-          Loading
+          Simple link small
         </Button>
       </div>
       <div>
@@ -207,7 +215,6 @@ export const Example = () => {
           primary
           disabled
           className="mr-32"
-          href="https://google.com/"
           target="_blank"
         >
           Disabled button primary
@@ -217,7 +224,6 @@ export const Example = () => {
           negative
           disabled
           className="mr-32"
-          href="https://google.com/"
           target="_blank"
         >
           Disabled button negative
@@ -227,7 +233,16 @@ export const Example = () => {
           utility
           disabled
           className="mr-32"
-          href="https://google.com/"
+          target="_blank"
+        >
+          Disabled button utility
+        </Button>
+        {/* @ts-ignore */}
+        <Button
+          utility
+          disabled
+          small
+          className="mr-32"
           target="_blank"
         >
           Disabled button utility
