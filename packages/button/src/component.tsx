@@ -1,7 +1,12 @@
 import React, { forwardRef, Ref } from 'react';
 import { button as ccButton } from '@warp-ds/css/component-classes';
+import { i18n } from '@lingui/core';
 import { classNames } from '@chbphone55/classnames';
 import type { ButtonProps } from './props';
+import { messages as enMessages} from './locales/en/messages.mjs';
+import { messages as nbMessages} from './locales/nb/messages.mjs';
+import { messages as fiMessages} from './locales/fi/messages.mjs';
+import { activateI18n } from '../../i18n';
 
 const buttonTypes = [    
   'primary',
@@ -49,6 +54,15 @@ export const Button = forwardRef<
     [ccButton.linkAsButton]: !!props.href,
   });
 
+  activateI18n(enMessages, nbMessages, fiMessages);
+
+  const ariaValueTextLoading = i18n._(
+    /*i18n*/ {
+      id: 'button.aria.loading',
+      message: 'Loading...',
+      comment: 'Screenreader message for buttons that are loading',
+    });
+
   return (
     <>
       {props.href ? (
@@ -80,7 +94,7 @@ export const Button = forwardRef<
           className="sr-only"
           role="progressbar"
           aria-valuenow={0}
-          aria-valuetext="Laster..."
+          aria-valuetext={ariaValueTextLoading}
         />
       ) : null}
     </>
