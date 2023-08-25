@@ -2,8 +2,12 @@ import type { LinguiConfig } from '@lingui/conf';
 import { supportedLocales } from './packages/i18n';
 
 const config: LinguiConfig = {
-  locales: supportedLocales,
+  locales: supportedLocales as unknown as string[],
   catalogs: [
+    {
+      include: ['packages/_helpers/**/*.{ts,tsx}'],
+      path: 'packages/_helpers/locales/{locale}/messages',
+    },
     {
       include: ['packages/breadcrumbs/src/**/*.{ts,tsx}'],
       path: 'packages/breadcrumbs/src/locales/{locale}/messages',
