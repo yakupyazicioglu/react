@@ -5,8 +5,8 @@ import {
   rotation,
   useRecompute as recompute,
   arrowLabels,
-} from '@fabric-ds/core/attention';
-import { attention as c } from '@fabric-ds/css/component-classes';
+} from '@warp-ds/core/attention';
+import { attention as ccAttention } from '@warp-ds/css/component-classes';
 import { ArrowProps, AttentionProps } from './props';
 
 export function Attention(props: AttentionProps) {
@@ -19,6 +19,15 @@ export function Attention(props: AttentionProps) {
     className,
     ...rest
   } = props;
+
+  const wrapperClasses = classNames(
+    ccAttention.base,  
+    {
+      [ccAttention.tooltip]: props.tooltip,
+      [ccAttention.callout]: props.callout,
+      [ccAttention.popover]: props.popover,
+    }
+  );
 
   const [actualDirection, setActualDirection] = useState(placement);
   // Don't show attention element before its position is computed on first render
@@ -83,7 +92,7 @@ export function Attention(props: AttentionProps) {
     <div
       className={classNames(
         {
-          'absolute z-50': !props.callout,
+          [ccAttention.notCallout]: !props.callout,
           invisible: !isVisible && !props.callout,
           hidden: !isVisible && !props.tooltip,
         },
@@ -91,47 +100,47 @@ export function Attention(props: AttentionProps) {
       )}
       ref={attentionRef}
     >
-      <div
-        className={classNames({
-          [c.base]: true,
-          [c.tooltip]: props.tooltip,
-          [c.callout]: props.callout,
-          [c.popover]: props.popover,
-        })}
-      >
+      <div className={wrapperClasses}>
         {!props.noArrow && (
           <Arrow {...props} ref={arrowRef} direction={placement} />
         )}
-        <div className="last-child:mb-0">{props.children}</div>
+        <div className={ccAttention.content}>{props.children}</div>
       </div>
     </div>
   );
 }
 
-const Arrow = forwardRef<HTMLDivElement, ArrowProps>((props, ref) => {
-  const { direction, tooltip, callout, popover } = props;
+const arrowDirectionClassname = (dir: string) => {
+  const direction = dir.charAt(0).toUpperCase() + dir.slice(1);
 
+  return `arrowDirection${direction}`;
+}
+
+const Arrow = forwardRef<HTMLDivElement, ArrowProps>((props, ref) => {
+  const { callout, direction, popover, tooltip } = props;
   const arrowDirection = opposites[direction];
+
+  const arrowClasses = classNames(
+    ccAttention.arrowBase,
+    ccAttention[arrowDirectionClassname(arrowDirection)],
+    {
+      [ccAttention.arrowTooltip]: tooltip,
+      [ccAttention.arrowCallout]: callout,
+      [ccAttention.arrowPopover]: popover,
+    },
+  );
 
   return (
     <div
       aria-label={arrowLabels[arrowDirection]}
       ref={ref}
-      className={classNames({
-        [c.arrowBase]: true,
-        [`-${arrowDirection}-8`]: true,
-        [c.arrowTooltip]: tooltip,
-        [c.arrowCallout]: callout,
-        [c.arrowPopover]: popover,
-      })}
+      className={arrowClasses}
       style={{
         // TW doesn't let us specify exactly one corner, only whole sides
         borderTopLeftRadius: '4px',
         zIndex: 1,
         // border alignment is off by a fraction of a pixel, this fixes it
-        [`margin${
-          arrowDirection.charAt(0).toUpperCase() + arrowDirection.slice(1)
-        }`]: '-0.5px',
+        [`margin${arrowDirectionClassname(arrowDirection)}`]: '-0.5px',
         transform: `rotate(${rotation[arrowDirection]}deg)`,
       }}
     />

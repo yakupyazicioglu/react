@@ -1,10 +1,15 @@
 import { classNames } from '@chbphone55/classnames';
-import { modal as c } from '@fabric-ds/css/component-classes';
+import { modal as ccModal } from '@warp-ds/css/component-classes';
 import React, { useEffect, useRef } from 'react';
 import { useId } from '../../utils/src';
 import FocusLock from 'react-focus-lock';
 import { ModalProps } from './props';
 import { setup, teardown } from 'scroll-doctor';
+import { i18n } from '@lingui/core';
+import { messages as nbMessages} from './locales/nb/messages.mjs';
+import { messages as enMessages} from './locales/en/messages.mjs';
+import { messages as fiMessages} from './locales/fi/messages.mjs';
+import { activateI18n } from '../../i18n';
 
 /**
  * A Modal dialog that renders on top the page
@@ -16,6 +21,8 @@ export const Modal = ({
 }: ModalProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const id = useId(props.id);
+
+  activateI18n(enMessages, nbMessages, fiMessages);
 
   useEffect(() => {
     teardown();
@@ -34,7 +41,7 @@ export const Modal = ({
     <FocusLock>
       <div
         onClick={props.onDismiss}
-        className={classNames(props.className, c.backdrop)}
+        className={classNames(props.className, ccModal.backdrop, ccModal.transparentBg)}
         style={{ ...props.style }}
       >
         <div
@@ -55,27 +62,32 @@ export const Modal = ({
               props.onDismiss();
             }
           }}
-          className={c.modal}
+          className={ccModal.modal}
           tabIndex={-1}
         >
-          <div className={c.title}>
+          <div className={ccModal.title}>
             {typeof props.left === 'boolean' && props.left ? (
               <button
                 type="button"
-                aria-label="Tilbake"
-                className={classNames([
-                  c.transitionTitle,
-                  c.titleButton,
-                  c.titleButtonLeft,
-                  'justify-self-start',
-                ])}
+                aria-label={i18n._(
+                  /*i18n*/ {
+                    id: 'modal.aria.back',
+                    message: 'Back',
+                    comment: 'Aria label for the back button in modal',
+                  },
+                )}
+                className={classNames(
+                  ccModal.transitionTitle,
+                  ccModal.titleButton,
+                  ccModal.titleButtonLeft,
+                )}
                 onClick={props.onDismiss}
               >
                 <svg
-                  className={classNames([
-                    c.titleButtonIcon,
-                    'transform rotate-90',
-                  ])}
+                  className={classNames(
+                    ccModal.titleButtonIcon,
+                    ccModal.titleButtonIconRotated,
+                  )}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
                 >
@@ -92,14 +104,13 @@ export const Modal = ({
 
             <div
               id={`${id}__title`}
-              className={classNames({
-                [c.transitionTitle]: true,
-                'justify-self-center': !!props.left,
-                'col-span-2': !!!props.left,
-              })}
+              className={classNames(
+                ccModal.transitionTitle,
+                !!props.left ? ccModal.transitionTitleCenter : ccModal.transitionTitleColSpan
+              )}
             >
               {typeof props.title === 'string' ? (
-                <p className={c.titleText}>{props.title}</p>
+                <p className={ccModal.titleText}>{props.title}</p>
               ) : (
                 props.title
               )}
@@ -108,17 +119,22 @@ export const Modal = ({
             {typeof props.right === 'boolean' && props.right ? (
               <button
                 type="button"
-                aria-label="Lukk"
+                aria-label={i18n._(
+                  /*i18n*/ {
+                    id: 'modal.aria.close',
+                    message: 'Close',
+                    comment: 'Aria label for the close button in modal',
+                  },
+                )}
                 onClick={props.onDismiss}
-                className={classNames([
-                  c.transitionTitle,
-                  c.titleButton,
-                  c.titleButtonRight,
-                  'justify-self-end',
-                ])}
+                className={classNames(
+                  ccModal.transitionTitle,
+                  ccModal.titleButton,
+                  ccModal.titleButtonRight,
+                )}
               >
                 <svg
-                  className={c.titleButtonIcon}
+                  className={ccModal.titleButtonIcon}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -136,11 +152,11 @@ export const Modal = ({
               props.right
             )}
           </div>
-          <div ref={contentRef} className={c.content}>
+          <div ref={contentRef} className={ccModal.content}>
             {props.children}
           </div>
 
-          {!!props.footer && <div className={c.footer}>{props.footer}</div>}
+          {!!props.footer && <div className={ccModal.footer}>{props.footer}</div>}
         </div>
       </div>
     </FocusLock>

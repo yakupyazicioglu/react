@@ -1,5 +1,5 @@
-const visit = require('unist-util-visit');
-const u = require('unist-builder');
+import { visit } from 'unist-util-visit';
+import { u } from 'unist-builder';
 
 /**
  * Remark plugin renders JSX code fences marked `example`
@@ -37,7 +37,7 @@ module.exports = () => (tree, file) => {
           index + 1,
           0,
           u('jsx', {
-            value: `<div className="example">${node.value}</div>`,
+            value: `<div className="example mb-16 p-24 border-2 border-t-0">${node.value}</div>`,
           }),
         );
       }

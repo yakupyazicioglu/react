@@ -1,11 +1,13 @@
-import { classNames } from '@chbphone55/classnames';
 import React, { forwardRef } from 'react';
+import { classNames } from '@chbphone55/classnames';
+import { input as ccInput, label as ccLabel, helpText as ccHelpText } from '@warp-ds/css/component-classes';
 import { useId } from '../../utils/src';
 import { TextFieldProps } from './props';
 
 export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
   (props, ref) => {
     const {
+      className,
       disabled,
       id: providedId,
       children,
@@ -33,32 +35,34 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
     );
 
     return (
-      <div
-        className={classNames({
-          'has-suffix': hasSuffix,
-          'has-prefix': hasPrefix,
-        })}
-      >
-        <div
-          className={classNames({
-            'input mb-0': true,
-            'input--is-invalid': isInvalid,
-            'input--is-disabled': disabled,
-            'input--is-read-only': readOnly,
-          })}
+        <div 
+          className={className}
+          style={style}
         >
           {label && (
-            <label htmlFor={id}>
+            <label htmlFor={id} className={classNames({
+              [ccLabel.label]: true,
+              [ccLabel.labelInvalid]: isInvalid
+            })} >
               {label}
               {optional && (
-                <span className="pl-8 font-normal text-14 text-gray-500">
+                <span className={ccLabel.optional}>
                   (valgfritt)
                 </span>
               )}
             </label>
           )}
-          <div className="relative">
+          <div className={ccInput.wrapper}>
             <input
+            className={classNames({
+              [ccInput.default]: true,
+              [ccInput.invalid]: isInvalid,
+              [ccInput.disabled]: disabled,
+              [ccInput.readOnly]: readOnly,
+              [ccInput.placeholder]: !!props.placeholder,
+              [ccInput.suffix]: hasSuffix,
+              [ccInput.prefix]: hasPrefix,    
+            })}
               {...rest}
               aria-describedby={helpId}
               aria-errormessage={isInvalid && helpId ? helpId : undefined}
@@ -73,12 +77,14 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           </div>
 
           {helpText && (
-            <div className="input__sub-text" id={helpId}>
+            <div className={classNames({
+              [ccHelpText.helpText]: true,
+              [ccHelpText.helpTextInvalid]: isInvalid
+            })} id={helpId}>
               {helpText}
             </div>
           )}
         </div>
-      </div>
     );
   },
 );

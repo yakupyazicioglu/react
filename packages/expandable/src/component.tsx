@@ -1,8 +1,8 @@
 import { classNames } from '@chbphone55/classnames';
 import {
-  box as boxClasses,
-  buttonReset,
-} from '@fabric-ds/css/component-classes';
+  box as ccBox,
+  expandable as ccExpandable,
+} from '@warp-ds/css/component-classes';
 import React from 'react';
 import { ExpandTransition, UnstyledHeading } from '../../_helpers';
 import { ExpandableProps } from './props';
@@ -40,9 +40,9 @@ export function Expandable(props: ExpandableProps) {
     <div
       {...rest}
       className={classNames(className, {
-        'bg-aqua-50': info,
-        ['py-0 px-0 ' + boxClasses.box]: box,
-        [boxClasses.bleed]: bleed,
+        [ccExpandable.expandable]: true,
+        [ccExpandable.expandableBox]: box,
+        [ccExpandable.expandableBleed]: bleed,
       })}
     >
       <UnstyledHeading level={headingLevel}>
@@ -51,25 +51,24 @@ export function Expandable(props: ExpandableProps) {
           aria-expanded={stateExpanded}
           className={classNames({
             [buttonClass || '']: true,
-            [buttonReset + ' hover:underline focus:underline']: true,
-            ['w-full text-left relative ' + boxClasses.box]: box,
-            'hover:text-aqua-700 active:text-aqua-800': info,
+            [ccExpandable.button]: true,
+            [ccExpandable.buttonBox]: box,
           })}
           onClick={() => toggleExpandable(stateExpanded)}
         >
-          <div className="flex justify-between align-center">
+          <div className={ccExpandable.title}>
             {typeof title === 'string' ? (
-              <span className="h4">{title}</span>
+              <span className={ccExpandable.titleType}>{title}</span>
             ) : (
               title
             )}
             {chevron && (
               <div
                 className={classNames({
-                  'self-center transform transition-transform': true,
-                  '-rotate-180': stateExpanded,
-                  'relative left-8': !box,
-                  'box-chevron': box,
+                  [ccExpandable.chevron]: true,
+                  [ccExpandable.chevronExpanded]: stateExpanded,
+                  [ccExpandable.chevronBox]: box,
+                  [ccExpandable.chevronNonBox]: !box,
                 })}
               >
                 <svg
@@ -96,7 +95,8 @@ export function Expandable(props: ExpandableProps) {
         <div
           className={classNames({
             [contentClass || '']: true,
-            [boxClasses.box + (title ? ' pt-0' : '')]: box,
+            [ccBox.box]: box,
+            [ccExpandable.paddingTop]: box && title,
           })}
         >
           {children}
@@ -112,8 +112,8 @@ function ExpansionBehaviour({ animated, stateExpanded, children }) {
   ) : (
     <div
       className={classNames({
-        'overflow-hidden': true,
-        'h-0 invisible': !stateExpanded,
+        [ccExpandable.expansion]: true,
+        [ccExpandable.expansionNotExpanded]: !stateExpanded,
       })}
       aria-hidden={!stateExpanded ? true : undefined}
     >

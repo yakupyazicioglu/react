@@ -1,32 +1,18 @@
 import React from 'react';
-import { classNames as cn } from '@chbphone55/classnames';
-import { tab as c } from '@fabric-ds/css/component-classes';
+import { classNames } from '@chbphone55/classnames';
+import { tab as ccTab } from '@warp-ds/css/component-classes';
 import type { TabProps } from './props';
 
-const setup = ({
-  className,
-  isActive,
-  setActive,
-  contained,
-  ...rest
-}: any) => ({
-  tab: cn({
+const setup = ({ className, isActive, setActive, ...rest }: any) => ({
+  tab: classNames(ccTab.tab, {
     [className]: !!className,
-    [c.tab]: true,
-    [c.tabActive]: isActive,
-    [c.tabContained]: contained,
-    [c.tabContainedActive]: contained && isActive,
+    [ccTab.tabActive]: isActive,
   }),
-  icon: cn({
-    [c.icon]: true,
-    [c.iconUnderlined]: !contained,
-    [isActive ? c.iconUnderlinedActive : c.iconUnderlinedInactive]: !contained,
+  icon: classNames(ccTab.icon, {
+    [ccTab.iconUnderlinedActive] : isActive,
   }),
-  content: cn({
-    [c.contentUnderlined]: !contained,
-    [isActive ? c.contentUnderlinedActive : c.contentUnderlinedInactive]:
-      !contained,
-    [c.contentContainedActive]: contained && isActive,
+  content: classNames(ccTab.contentUnderlined, {
+    [ccTab.contentUnderlinedActive]: isActive,
   }),
   attrs: { ...rest },
 });
@@ -70,7 +56,7 @@ export function Tab(props: TabProps) {
       )}
 
       {children && !over && (
-        <div className="flex items-center justify-center gap-8">
+        <div className={ccTab.content}>
           {children}
           {label}
         </div>

@@ -1,9 +1,14 @@
-import { classNames } from '@chbphone55/classnames';
 import React, { forwardRef, useRef } from 'react';
+import { i18n } from '@lingui/core';
+import { classNames } from '@chbphone55/classnames';
+import { input as ccInput, label as ccLabel, helpText as ccHelpText } from '@warp-ds/css/component-classes';
 import { useId } from '../../utils/src';
 import { TextAreaProps } from './props';
 import useTextAreaHeight from './useTextAreaHeight';
-
+import { messages as nbMessages} from './locales/nb/messages.mjs';
+import { messages as enMessages} from './locales/en/messages.mjs';
+import { messages as fiMessages} from './locales/fi/messages.mjs';
+import { activateI18n } from '../../i18n';
 /**
  * A textarea component that automatically resizes as content changes.
  */
@@ -23,8 +28,11 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       style,
       value,
       optional,
+      placeholder,
       ...rest
     } = props;
+
+    activateI18n(enMessages, nbMessages, fiMessages);
 
     const id = useId(providedId);
     const ref = useRef<HTMLTextAreaElement | null>(null);
@@ -41,26 +49,38 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
     return (
       <div
-        className={classNames(className, {
-          'input mb-0': true,
-          'input--is-invalid': isInvalid,
-          'input--is-disabled': disabled,
-          'input--is-read-only': readOnly,
-        })}
+        className={className}
         style={style}
       >
         {label && (
-          <label htmlFor={id}>
+          <label htmlFor={id} className={classNames({
+            [ccLabel.label]: true,
+            [ccLabel.labelInvalid]: isInvalid
+          })} >
             {label}
             {optional && (
-              <span className="pl-8 font-normal text-14 text-gray-500">
-                (valgfritt)
+              <span className={ccLabel.optional}>
+                {i18n._(
+                  /*i18n*/ {
+                    id: 'textarea.label.optional',
+                    message: '(optional)',
+                    comment: 'Shown behind label when marked as optional',
+                  },
+                )}
               </span>
             )}
           </label>
         )}
         <textarea
+          className={classNames({
+            [`${ccInput.default} ${ccInput.textArea}`]: true,
+            [ccInput.placeholder]: !!placeholder,
+            [ccInput.invalid]: isInvalid,
+            [ccInput.disabled]: disabled,
+            [ccInput.readOnly]: readOnly,
+          })}
           {...rest}
+          placeholder={placeholder}
           aria-describedby={helpId}
           aria-errormessage={isInvalid && helpId ? helpId : undefined}
           aria-invalid={isInvalid}
@@ -80,7 +100,12 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           readOnly={readOnly}
           value={value}
         />
-        {helpText && <div className="input__sub-text">{helpText}</div>}
+        {helpText && <div 
+          className={classNames({
+            [ccHelpText.helpText]: true,
+            [ccHelpText.helpTextInvalid]: isInvalid
+          })}
+          >{helpText}</div>}
       </div>
     );
   },
