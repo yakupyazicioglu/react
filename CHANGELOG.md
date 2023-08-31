@@ -1,3 +1,10 @@
+## [1.0.1-next.1](https://github.com/warp-ds/react/compare/v1.0.0...v1.0.1-next.1) (2023-08-31)
+
+
+### Bug Fixes
+
+* use new button classes and improve conditions ([#67](https://github.com/warp-ds/react/issues/67)) ([09c8245](https://github.com/warp-ds/react/commit/09c8245ae3cb38acff7d52323cddf0b5609923aa))
+
 # 1.0.0 (2023-08-30)
 
 
