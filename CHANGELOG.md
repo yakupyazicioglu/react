@@ -1,3 +1,10 @@
+## [1.0.1-next.2](https://github.com/warp-ds/react/compare/v1.0.1-next.1...v1.0.1-next.2) (2023-09-05)
+
+
+### Bug Fixes
+
+* add aria-current propp to the anchor element for e.g. pagination component ([#81](https://github.com/warp-ds/react/issues/81)) ([5b532b6](https://github.com/warp-ds/react/commit/5b532b6da8fa313701f2df31f6a7c823c8fec520))
+
 ## [1.0.1-next.1](https://github.com/warp-ds/react/compare/v1.0.0...v1.0.1-next.1) (2023-08-31)
 
 
