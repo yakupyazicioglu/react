@@ -1,3 +1,10 @@
+## [1.0.1-next.3](https://github.com/warp-ds/react/compare/v1.0.1-next.2...v1.0.1-next.3) (2023-09-07)
+
+
+### Bug Fixes
+
+* add check for children in tabs ([#83](https://github.com/warp-ds/react/issues/83)) ([b6f4ccd](https://github.com/warp-ds/react/commit/b6f4ccd6dd3dcf62e75f6ba1a9a00154a67d950a))
+
 ## [1.0.1-next.2](https://github.com/warp-ds/react/compare/v1.0.1-next.1...v1.0.1-next.2) (2023-09-05)
 
 
