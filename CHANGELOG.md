@@ -1,3 +1,10 @@
+## [1.0.1-next.4](https://github.com/warp-ds/react/compare/v1.0.1-next.3...v1.0.1-next.4) (2023-09-18)
+
+
+### Bug Fixes
+
+* **button:** set secondary variant styles by default ([#86](https://github.com/warp-ds/react/issues/86)) ([cb0c60f](https://github.com/warp-ds/react/commit/cb0c60f7df0711fa901a09fb28b9126682ebd387))
+
 ## [1.0.1-next.3](https://github.com/warp-ds/react/compare/v1.0.1-next.2...v1.0.1-next.3) (2023-09-07)
 
 
