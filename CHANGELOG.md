@@ -1,3 +1,10 @@
+## [1.0.1-next.5](https://github.com/warp-ds/react/compare/v1.0.1-next.4...v1.0.1-next.5) (2023-09-19)
+
+
+### Bug Fixes
+
+* pass onClick to anchor in button component ([#87](https://github.com/warp-ds/react/issues/87)) ([24a4247](https://github.com/warp-ds/react/commit/24a4247fe3c58db07c69ed9e56ea00d825e575ed))
+
 ## [1.0.1-next.4](https://github.com/warp-ds/react/compare/v1.0.1-next.3...v1.0.1-next.4) (2023-09-18)
 
 
