@@ -31,6 +31,7 @@ export const Button = forwardRef<
     link,
     pill,
     loading,
+    fullWidth,
     ...rest
   } = props;
 
@@ -96,6 +97,8 @@ export const Button = forwardRef<
     [ccButton.link]: link && !small,
     [ccButton.linkSmall]: link && small,
     [ccButton.linkAsButton]: !!props.href,
+    [ccButton.fullWidth]: fullWidth,
+    [ccButton.contentWidth]: !fullWidth,
   });
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
