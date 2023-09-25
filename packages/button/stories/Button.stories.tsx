@@ -28,6 +28,18 @@ export const Example = () => {
         <Button className="mr-32" primary small loading>
           Small Loading
         </Button>
+        {/* @ts-ignore */}
+        <Button className="mr-32" primary quiet>
+          Quiet
+        </Button>
+        {/* @ts-ignore */}
+        <Button className="mr-32" primary quiet small>
+          Quiet Small
+        </Button>
+        {/* @ts-ignore */}
+        <Button className="mr-32" primary quiet small loading>
+          Quiet Small Loading
+        </Button>
       </div>
       <div>
         <h3>Secondary</h3>
@@ -71,22 +83,22 @@ export const Example = () => {
         <h3>Negative</h3>
         {/* @ts-ignore */}
         <Button className="mr-32" negative>
-          Primary
+        Negative
         </Button>
         <Button className="mr-32" negative href="https://google.com">
           Simple href
         </Button>
         {/* @ts-ignore */}
         <Button className="mr-32" negative loading>
-          Primary Loading
+          Negative Loading
         </Button>
         {/* @ts-ignore */}
         <Button className="mr-32" negative small>
-          Primary Small
+          Negative Small
         </Button>
         {/* @ts-ignore */}
         <Button className="mr-32" negative small loading>
-          Primary Small Loading
+          Negative Small Loading
         </Button>
         {/* @ts-ignore */}
         <Button className="mr-32" negative quiet>
@@ -130,12 +142,20 @@ export const Example = () => {
         <Button className="mr-32" utility quiet>
           Quiet
         </Button>
+        {/* @ts-ignore */}
+        <Button className="mr-32" utility quiet small>
+          Quiet small
+        </Button>
       </div>
       <div>
         <h3>Pill</h3>
         {/* @ts-ignore */}
         <Button className="mr-32" pill>
-          Simple
+          Simple pill
+        </Button>
+        {/* @ts-ignore */}
+        <Button className="mr-32" pill small>
+          Simple small pill
         </Button>
         {/* @ts-ignore */}
         <Button className="mr-32" pill loading>
@@ -150,7 +170,7 @@ export const Example = () => {
         </Button>
         {/* @ts-ignore */}
         <Button className="mr-32" link small>
-          Loading
+          Simple link small
         </Button>
       </div>
       <div>
@@ -190,6 +210,15 @@ export const Example = () => {
         >
           Simple link as button utility
         </Button>
+        {/* @ts-ignore */}
+        <Button
+          className="mr-32"
+          href="https://google.com/"
+          target="_blank"
+          onClick={() => alert("you've clicked")}
+        >
+          Simple link with onClick
+        </Button>
       </div>
       <div>
         <h3>Disabled button</h3>
@@ -204,20 +233,39 @@ export const Example = () => {
         </Button>
         {/* @ts-ignore */}
         <Button
+          secondary
+          small
+          quiet
+          disabled
+          className="mr-32"
+          target="_blank"
+        >
+          Disabled small quiet secondary button
+        </Button>
+        {/* @ts-ignore */}
+        <Button
           primary
           disabled
           className="mr-32"
-          href="https://google.com/"
           target="_blank"
         >
           Disabled button primary
+        </Button>
+               {/* @ts-ignore */}
+        <Button
+          primary
+          small
+          disabled
+          className="mr-32"
+          target="_blank"
+        >
+          Disabled button small primary
         </Button>
         {/* @ts-ignore */}
         <Button
           negative
           disabled
           className="mr-32"
-          href="https://google.com/"
           target="_blank"
         >
           Disabled button negative
@@ -227,10 +275,26 @@ export const Example = () => {
           utility
           disabled
           className="mr-32"
-          href="https://google.com/"
           target="_blank"
         >
           Disabled button utility
+        </Button>
+        {/* @ts-ignore */}
+        <Button
+          utility
+          disabled
+          small
+          className="mr-32"
+          target="_blank"
+        >
+          Disabled button utility small
+        </Button>
+      </div>
+      <div>
+      <h3>Full width button</h3>
+      {/* @ts-ignore */}
+      <Button fullWidth className="mr-32" primary>
+          Full width
         </Button>
       </div>
     </div>
