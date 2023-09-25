@@ -1,3 +1,15 @@
+## [1.0.1](https://github.com/warp-ds/react/compare/v1.0.0...v1.0.1) (2023-09-25)
+
+
+### Bug Fixes
+
+* add aria-current propp to the anchor element for e.g. pagination component ([#81](https://github.com/warp-ds/react/issues/81)) ([5b532b6](https://github.com/warp-ds/react/commit/5b532b6da8fa313701f2df31f6a7c823c8fec520))
+* add check for children in tabs ([#83](https://github.com/warp-ds/react/issues/83)) ([b6f4ccd](https://github.com/warp-ds/react/commit/b6f4ccd6dd3dcf62e75f6ba1a9a00154a67d950a))
+* Add fullWidth button prop ([#89](https://github.com/warp-ds/react/issues/89)) ([4cdbe5d](https://github.com/warp-ds/react/commit/4cdbe5d3c42f21c938ac5c416824c677601fb8ad))
+* **button:** set secondary variant styles by default ([#86](https://github.com/warp-ds/react/issues/86)) ([cb0c60f](https://github.com/warp-ds/react/commit/cb0c60f7df0711fa901a09fb28b9126682ebd387))
+* pass onClick to anchor in button component ([#87](https://github.com/warp-ds/react/issues/87)) ([24a4247](https://github.com/warp-ds/react/commit/24a4247fe3c58db07c69ed9e56ea00d825e575ed))
+* use new button classes and improve conditions ([#67](https://github.com/warp-ds/react/issues/67)) ([09c8245](https://github.com/warp-ds/react/commit/09c8245ae3cb38acff7d52323cddf0b5609923aa))
+
 ## [1.0.1-next.6](https://github.com/warp-ds/react/compare/v1.0.1-next.5...v1.0.1-next.6) (2023-09-20)
 
 
