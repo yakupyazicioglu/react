@@ -1,3 +1,17 @@
+# [1.1.0-next.2](https://github.com/warp-ds/react/compare/v1.1.0-next.1...v1.1.0-next.2) (2023-10-06)
+
+
+### Bug Fixes
+
+* **forms:** localize 'optional' label in forms ([#94](https://github.com/warp-ds/react/issues/94)) ([f1bc283](https://github.com/warp-ds/react/commit/f1bc283891d56e4642a829140ac8641a0bd67d3f))
+
+# [1.1.0-next.1](https://github.com/warp-ds/react/compare/v1.0.1...v1.1.0-next.1) (2023-09-25)
+
+
+### Features
+
+* Add Badge component ([#85](https://github.com/warp-ds/react/issues/85)) ([ce8ba9d](https://github.com/warp-ds/react/commit/ce8ba9d81ee021a412bf14f2d533fd107c2b3032))
+
 ## [1.0.1](https://github.com/warp-ds/react/compare/v1.0.0...v1.0.1) (2023-09-25)
 
 
