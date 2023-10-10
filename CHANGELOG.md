@@ -1,3 +1,10 @@
+## [1.1.1-next.1](https://github.com/warp-ds/react/compare/v1.1.0...v1.1.1-next.1) (2023-10-10)
+
+
+### Bug Fixes
+
+* add leading slash to crowdin path ([#98](https://github.com/warp-ds/react/issues/98)) ([472d456](https://github.com/warp-ds/react/commit/472d4563157de905dfa4a5d09bb43812626c1b5d))
+
 # [1.1.0](https://github.com/warp-ds/react/compare/v1.0.1...v1.1.0) (2023-10-09)
 
 
