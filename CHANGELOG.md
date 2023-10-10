@@ -1,3 +1,10 @@
+## [1.1.1-next.2](https://github.com/warp-ds/react/compare/v1.1.1-next.1...v1.1.1-next.2) (2023-10-10)
+
+
+### Bug Fixes
+
+* only sync locales on next branch for now ([#99](https://github.com/warp-ds/react/issues/99)) ([f068199](https://github.com/warp-ds/react/commit/f06819920016e7d02b6736cfe5f7212c6967087f))
+
 ## [1.1.1-next.1](https://github.com/warp-ds/react/compare/v1.1.0...v1.1.1-next.1) (2023-10-10)
 
 
