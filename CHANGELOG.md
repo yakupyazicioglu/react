@@ -1,3 +1,10 @@
+## [1.1.1-next.4](https://github.com/warp-ds/react/compare/v1.1.1-next.3...v1.1.1-next.4) (2023-10-11)
+
+
+### Bug Fixes
+
+* a11y issues for attention component ([#123](https://github.com/warp-ds/react/issues/123)) ([0588564](https://github.com/warp-ds/react/commit/05885644551b77913285a35faa2266b1b16a0138))
+
 ## [1.1.1-next.3](https://github.com/warp-ds/react/compare/v1.1.1-next.2...v1.1.1-next.3) (2023-10-11)
 
 
