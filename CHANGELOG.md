@@ -1,3 +1,10 @@
+## [1.1.1-next.5](https://github.com/warp-ds/react/compare/v1.1.1-next.4...v1.1.1-next.5) (2023-10-13)
+
+
+### Bug Fixes
+
+* replace inline svgs with warp icons ([#95](https://github.com/warp-ds/react/issues/95)) ([17f5b05](https://github.com/warp-ds/react/commit/17f5b054c1a574fd413b367cf2624e815bbf8a32))
+
 ## [1.1.1-next.4](https://github.com/warp-ds/react/compare/v1.1.1-next.3...v1.1.1-next.4) (2023-10-11)
 
 
