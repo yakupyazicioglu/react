@@ -1,3 +1,10 @@
+## [1.1.1-next.9](https://github.com/warp-ds/react/compare/v1.1.1-next.8...v1.1.1-next.9) (2023-10-20)
+
+
+### Bug Fixes
+
+* anchor text alignment & icon translations ([#134](https://github.com/warp-ds/react/issues/134)) ([d682586](https://github.com/warp-ds/react/commit/d682586225c9056a1883984c7ccd4c2ded2e16e5))
+
 ## [1.1.1-next.8](https://github.com/warp-ds/react/compare/v1.1.1-next.7...v1.1.1-next.8) (2023-10-20)
 
 
