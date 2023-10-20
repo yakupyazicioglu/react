@@ -1,3 +1,10 @@
+## [1.1.1-next.8](https://github.com/warp-ds/react/compare/v1.1.1-next.7...v1.1.1-next.8) (2023-10-20)
+
+
+### Bug Fixes
+
+* a11y fixes for button link and link as buttons ([#132](https://github.com/warp-ds/react/issues/132)) ([47c6bd7](https://github.com/warp-ds/react/commit/47c6bd7fab38151bff5e373e88606f25c2656719))
+
 ## [1.1.1-next.7](https://github.com/warp-ds/react/compare/v1.1.1-next.6...v1.1.1-next.7) (2023-10-20)
 
 
