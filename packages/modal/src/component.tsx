@@ -1,26 +1,28 @@
-import { classNames } from '@chbphone55/classnames';
-import { modal as ccModal } from '@warp-ds/css/component-classes';
-import React, { useEffect, useRef } from 'react';
-import { useId } from '../../utils/src';
-import FocusLock from 'react-focus-lock';
-import { ModalProps } from './props';
-import { setup, teardown } from 'scroll-doctor';
-import { i18n } from '@lingui/core';
-import { messages as nbMessages} from './locales/nb/messages.mjs';
-import { messages as enMessages} from './locales/en/messages.mjs';
-import { messages as fiMessages} from './locales/fi/messages.mjs';
-import { activateI18n } from '../../i18n';
+import { classNames } from "@chbphone55/classnames";
+import { modal as ccModal } from "@warp-ds/css/component-classes";
+import React, { useEffect, useRef } from "react";
+import { useId } from "../../utils/src";
+import FocusLock from "react-focus-lock";
+import { ModalProps } from "./props";
+import { setup, teardown } from "scroll-doctor";
+import { i18n } from "@lingui/core";
+import { messages as nbMessages } from "./locales/nb/messages.mjs";
+import { messages as enMessages } from "./locales/en/messages.mjs";
+import { messages as fiMessages } from "./locales/fi/messages.mjs";
+import { activateI18n } from "../../i18n";
+import { IconClose16, IconTableSortDown16 } from "@warp-ds/icons/react";
 
 /**
  * A Modal dialog that renders on top the page
  */
 export const Modal = ({
-  'aria-label': ariaLabel,
-  'aria-labelledby': ariaLabelledBy,
+  "aria-label": ariaLabel,
+  "aria-labelledby": ariaLabelledBy,
   ...props
 }: ModalProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const id = useId(props.id);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   activateI18n(enMessages, nbMessages, fiMessages);
 
@@ -31,9 +33,12 @@ export const Modal = ({
   }, [props.open, contentRef]);
 
   useEffect(() => {
-    if (!props.initialFocusRef) return;
-    props.initialFocusRef.current?.focus();
-  }, [props.open, props.initialFocusRef]);
+    if (!props.initialFocusRef) {
+      props.right && closeButtonRef.current?.focus();
+    } else {
+      props.initialFocusRef.current?.focus();
+    }
+  }, [props.open, props.initialFocusRef, props.right]);
 
   if (!props.open) return <></>;
 
@@ -41,7 +46,11 @@ export const Modal = ({
     <FocusLock>
       <div
         onClick={props.onDismiss}
-        className={classNames(props.className, ccModal.backdrop, ccModal.transparentBg)}
+        className={classNames(
+          props.className,
+          ccModal.backdrop,
+          ccModal.transparentBg
+        )}
         style={{ ...props.style }}
       >
         <div
@@ -58,7 +67,7 @@ export const Modal = ({
           }
           onKeyDown={(event) => {
             if (!props.onDismiss) return;
-            if (event.key === 'Escape') {
+            if (event.key === "Escape") {
               props.onDismiss();
             }
           }}
@@ -66,37 +75,29 @@ export const Modal = ({
           tabIndex={-1}
         >
           <div className={ccModal.title}>
-            {typeof props.left === 'boolean' && props.left ? (
+            {typeof props.left === "boolean" && props.left ? (
               <button
                 type="button"
                 aria-label={i18n._(
                   /*i18n*/ {
-                    id: 'modal.aria.back',
-                    message: 'Back',
-                    comment: 'Aria label for the back button in modal',
-                  },
+                    id: "modal.aria.back",
+                    message: "Back",
+                    comment: "Aria label for the back button in modal",
+                  }
                 )}
                 className={classNames(
                   ccModal.transitionTitle,
                   ccModal.titleButton,
-                  ccModal.titleButtonLeft,
+                  ccModal.titleButtonLeft
                 )}
                 onClick={props.onDismiss}
               >
-                <svg
+                <IconTableSortDown16
                   className={classNames(
                     ccModal.titleButtonIcon,
-                    ccModal.titleButtonIconRotated,
+                    ccModal.titleButtonIconRotated
                   )}
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill="currentColor"
-                    fillRule="nonzero"
-                    d="M8 2.25a.75.75 0 01.743.648L8.75 3v8.189l3.72-3.72a.75.75 0 011.133.977l-.073.084-5 5a.747.747 0 01-.374.204l-.104.014h-.104a.747.747 0 01-.478-.218l-5-5a.75.75 0 01.976-1.133l.084.073 3.72 3.719V3A.75.75 0 018 2.25z"
-                  ></path>
-                </svg>
+                />
               </button>
             ) : (
               props.left
@@ -106,47 +107,37 @@ export const Modal = ({
               id={`${id}__title`}
               className={classNames(
                 ccModal.transitionTitle,
-                !!props.left ? ccModal.transitionTitleCenter : ccModal.transitionTitleColSpan
+                !!props.left
+                  ? ccModal.transitionTitleCenter
+                  : ccModal.transitionTitleColSpan
               )}
             >
-              {typeof props.title === 'string' ? (
-                <p className={ccModal.titleText}>{props.title}</p>
+              {typeof props.title === "string" ? (
+                <h1 className={ccModal.titleText}>{props.title}</h1>
               ) : (
                 props.title
               )}
             </div>
 
-            {typeof props.right === 'boolean' && props.right ? (
+            {typeof props.right === "boolean" && props.right ? (
               <button
+                ref={closeButtonRef}
                 type="button"
                 aria-label={i18n._(
                   /*i18n*/ {
-                    id: 'modal.aria.close',
-                    message: 'Close',
-                    comment: 'Aria label for the close button in modal',
-                  },
+                    id: "modal.aria.close",
+                    message: "Close",
+                    comment: "Aria label for the close button in modal",
+                  }
                 )}
                 onClick={props.onDismiss}
                 className={classNames(
                   ccModal.transitionTitle,
                   ccModal.titleButton,
-                  ccModal.titleButtonRight,
+                  ccModal.titleButtonRight
                 )}
               >
-                <svg
-                  className={ccModal.titleButtonIcon}
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2.5"
-                    d="M12 12l6 6-6-6-6 6 6-6zm0 0L6 6l6 6 6-6-6 6z"
-                  />
-                </svg>
+                <IconClose16 className={ccModal.titleButtonIcon} />
               </button>
             ) : (
               props.right
@@ -156,7 +147,9 @@ export const Modal = ({
             {props.children}
           </div>
 
-          {!!props.footer && <div className={ccModal.footer}>{props.footer}</div>}
+          {!!props.footer && (
+            <div className={ccModal.footer}>{props.footer}</div>
+          )}
         </div>
       </div>
     </FocusLock>
