@@ -1,3 +1,11 @@
+## [1.1.1-next.10](https://github.com/warp-ds/react/compare/v1.1.1-next.9...v1.1.1-next.10) (2023-10-23)
+
+
+### Bug Fixes
+
+* **breadcrumbs.js:**  Remove double Aria Label ([90d56a8](https://github.com/warp-ds/react/commit/90d56a8429427af70f040ecfbcab5a828ff5a9a4))
+* **breadcrumbs:** fixed double arialabel and removed area hidden from the seperators ([02f4eb2](https://github.com/warp-ds/react/commit/02f4eb27ac3dc2fe316d4cede8ea62df78d26304))
+
 ## [1.1.1-next.9](https://github.com/warp-ds/react/compare/v1.1.1-next.8...v1.1.1-next.9) (2023-10-20)
 
 
