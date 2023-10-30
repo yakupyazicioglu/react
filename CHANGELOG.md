@@ -1,3 +1,10 @@
+# [1.2.0-next.2](https://github.com/warp-ds/react/compare/v1.2.0-next.1...v1.2.0-next.2) (2023-10-30)
+
+
+### Bug Fixes
+
+* adjust further a11y issues attention ([#147](https://github.com/warp-ds/react/issues/147)) ([b668aeb](https://github.com/warp-ds/react/commit/b668aeb18c18645a443802e9566bbed54483431b))
+
 # [1.2.0-next.1](https://github.com/warp-ds/react/compare/v1.1.2-next.6...v1.2.0-next.1) (2023-10-26)
 
 
