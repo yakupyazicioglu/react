@@ -1,3 +1,10 @@
+# [1.2.0-next.4](https://github.com/warp-ds/react/compare/v1.2.0-next.3...v1.2.0-next.4) (2023-11-02)
+
+
+### Bug Fixes
+
+* a11y fixes for select component ([#146](https://github.com/warp-ds/react/issues/146)) ([d4d8c18](https://github.com/warp-ds/react/commit/d4d8c18c012b74e1f2118eba66b3b338574c6fb8))
+
 # [1.2.0-next.3](https://github.com/warp-ds/react/compare/v1.2.0-next.2...v1.2.0-next.3) (2023-11-02)
 
 
