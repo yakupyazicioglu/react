@@ -1,3 +1,10 @@
+# [1.2.0-next.3](https://github.com/warp-ds/react/compare/v1.2.0-next.2...v1.2.0-next.3) (2023-11-02)
+
+
+### Features
+
+* **attention:** add close button ([#149](https://github.com/warp-ds/react/issues/149)) ([6a5c9d6](https://github.com/warp-ds/react/commit/6a5c9d6c42242ea818ccf84a8c8e06ef0fab86bc))
+
 # [1.2.0-next.2](https://github.com/warp-ds/react/compare/v1.2.0-next.1...v1.2.0-next.2) (2023-10-30)
 
 
