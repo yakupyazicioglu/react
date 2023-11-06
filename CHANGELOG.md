@@ -1,3 +1,73 @@
+# [1.2.0-next.4](https://github.com/warp-ds/react/compare/v1.2.0-next.3...v1.2.0-next.4) (2023-11-02)
+
+
+### Bug Fixes
+
+* a11y fixes for select component ([#146](https://github.com/warp-ds/react/issues/146)) ([d4d8c18](https://github.com/warp-ds/react/commit/d4d8c18c012b74e1f2118eba66b3b338574c6fb8))
+
+# [1.2.0-next.3](https://github.com/warp-ds/react/compare/v1.2.0-next.2...v1.2.0-next.3) (2023-11-02)
+
+
+### Features
+
+* **attention:** add close button ([#149](https://github.com/warp-ds/react/issues/149)) ([6a5c9d6](https://github.com/warp-ds/react/commit/6a5c9d6c42242ea818ccf84a8c8e06ef0fab86bc))
+
+# [1.2.0-next.2](https://github.com/warp-ds/react/compare/v1.2.0-next.1...v1.2.0-next.2) (2023-10-30)
+
+
+### Bug Fixes
+
+* adjust further a11y issues attention ([#147](https://github.com/warp-ds/react/issues/147)) ([b668aeb](https://github.com/warp-ds/react/commit/b668aeb18c18645a443802e9566bbed54483431b))
+
+# [1.2.0-next.1](https://github.com/warp-ds/react/compare/v1.1.2-next.6...v1.2.0-next.1) (2023-10-26)
+
+
+### Features
+
+* **attention:** add highlight variant ([#145](https://github.com/warp-ds/react/issues/145)) ([1b86124](https://github.com/warp-ds/react/commit/1b861240b6f7fbc82502ee05eece68d3eb55774e))
+
+## [1.1.2-next.6](https://github.com/warp-ds/react/compare/v1.1.2-next.5...v1.1.2-next.6) (2023-10-26)
+
+
+### Bug Fixes
+
+* a11y issues for expandable ([#138](https://github.com/warp-ds/react/issues/138)) ([ff8fecc](https://github.com/warp-ds/react/commit/ff8fecc5826b25549aceb35f324d9cf0f2284bee))
+
+## [1.1.2-next.5](https://github.com/warp-ds/react/compare/v1.1.2-next.4...v1.1.2-next.5) (2023-10-26)
+
+
+### Bug Fixes
+
+* activate translations in steps ([#144](https://github.com/warp-ds/react/issues/144)) ([8eb603e](https://github.com/warp-ds/react/commit/8eb603ea3efb20a5cf04bc58fedb3d4dafe2cb15))
+
+## [1.1.2-next.4](https://github.com/warp-ds/react/compare/v1.1.2-next.3...v1.1.2-next.4) (2023-10-25)
+
+
+### Bug Fixes
+
+* add a11y attributes for to define steps in more accessible way ([#140](https://github.com/warp-ds/react/issues/140)) ([47af229](https://github.com/warp-ds/react/commit/47af2297dfd79f5e8ff121e4008d37f3cf5a5ef0))
+
+## [1.1.2-next.3](https://github.com/warp-ds/react/compare/v1.1.2-next.2...v1.1.2-next.3) (2023-10-24)
+
+
+### Bug Fixes
+
+* crowdin build step ([#142](https://github.com/warp-ds/react/issues/142)) ([f2ace37](https://github.com/warp-ds/react/commit/f2ace37db88b53c1fc81dfb8c42e17daad8f2063))
+
+## [1.1.2-next.2](https://github.com/warp-ds/react/compare/v1.1.2-next.1...v1.1.2-next.2) (2023-10-24)
+
+
+### Bug Fixes
+
+* a11y adjust attention ([#127](https://github.com/warp-ds/react/issues/127)) ([6fba30c](https://github.com/warp-ds/react/commit/6fba30ceefe92fd671c062ad87f7247087b446f2))
+
+## [1.1.2-next.1](https://github.com/warp-ds/react/compare/v1.1.1...v1.1.2-next.1) (2023-10-23)
+
+
+### Bug Fixes
+
+* Add role property to Box component ([#139](https://github.com/warp-ds/react/issues/139)) ([e46db48](https://github.com/warp-ds/react/commit/e46db48882ad79ab20fc839bf67f6c1c92b5a81e))
+
 ## [1.1.1](https://github.com/warp-ds/react/compare/v1.1.0...v1.1.1) (2023-10-23)
 
 
