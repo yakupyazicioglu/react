@@ -1,3 +1,10 @@
+## [1.2.1-next.1](https://github.com/warp-ds/react/compare/v1.2.0...v1.2.1-next.1) (2023-11-08)
+
+
+### Bug Fixes
+
+* **combobox:** don't open on modifier key press and fix aria-expanded ([#152](https://github.com/warp-ds/react/issues/152)) ([71e42f6](https://github.com/warp-ds/react/commit/71e42f6ddd224c9b76cbf8d4db21fecf33b4e91e))
+
 # [1.2.0](https://github.com/warp-ds/react/compare/v1.1.1...v1.2.0) (2023-11-06)
 
 
