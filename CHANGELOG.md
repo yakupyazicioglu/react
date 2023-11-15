@@ -1,3 +1,10 @@
+## [1.2.1-next.2](https://github.com/warp-ds/react/compare/v1.2.1-next.1...v1.2.1-next.2) (2023-11-15)
+
+
+### Bug Fixes
+
+* **textfield:** render prefix before input ([#161](https://github.com/warp-ds/react/issues/161)) ([2017cff](https://github.com/warp-ds/react/commit/2017cff7a67be1b0cac958cf0e85907591d8e3e8))
+
 ## [1.2.1-next.1](https://github.com/warp-ds/react/compare/v1.2.0...v1.2.1-next.1) (2023-11-08)
 
 
