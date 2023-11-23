@@ -1,3 +1,10 @@
+## [1.2.1-next.3](https://github.com/warp-ds/react/compare/v1.2.1-next.2...v1.2.1-next.3) (2023-11-23)
+
+
+### Bug Fixes
+
+* Import icons in the correct way ([#169](https://github.com/warp-ds/react/issues/169)) ([f279db9](https://github.com/warp-ds/react/commit/f279db9165bfb673dcf55507e3e3880618cc23b3))
+
 ## [1.2.1-next.2](https://github.com/warp-ds/react/compare/v1.2.1-next.1...v1.2.1-next.2) (2023-11-15)
 
 
