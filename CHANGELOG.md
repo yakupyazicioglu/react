@@ -1,3 +1,10 @@
+## [1.2.1-next.4](https://github.com/warp-ds/react/compare/v1.2.1-next.3...v1.2.1-next.4) (2023-11-28)
+
+
+### Bug Fixes
+
+* **textfield:** allow styling input's left padding when prefix is wider than 40px ([#173](https://github.com/warp-ds/react/issues/173)) ([89e5a27](https://github.com/warp-ds/react/commit/89e5a278edf5095e80d5aca24f0c4aa5d3c9fd9e))
+
 ## [1.2.1-next.3](https://github.com/warp-ds/react/compare/v1.2.1-next.2...v1.2.1-next.3) (2023-11-23)
 
 
