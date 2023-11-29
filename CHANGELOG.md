@@ -1,3 +1,31 @@
+## [1.2.1-next.4](https://github.com/warp-ds/react/compare/v1.2.1-next.3...v1.2.1-next.4) (2023-11-28)
+
+
+### Bug Fixes
+
+* **textfield:** allow styling input's left padding when prefix is wider than 40px ([#173](https://github.com/warp-ds/react/issues/173)) ([89e5a27](https://github.com/warp-ds/react/commit/89e5a278edf5095e80d5aca24f0c4aa5d3c9fd9e))
+
+## [1.2.1-next.3](https://github.com/warp-ds/react/compare/v1.2.1-next.2...v1.2.1-next.3) (2023-11-23)
+
+
+### Bug Fixes
+
+* Import icons in the correct way ([#169](https://github.com/warp-ds/react/issues/169)) ([f279db9](https://github.com/warp-ds/react/commit/f279db9165bfb673dcf55507e3e3880618cc23b3))
+
+## [1.2.1-next.2](https://github.com/warp-ds/react/compare/v1.2.1-next.1...v1.2.1-next.2) (2023-11-15)
+
+
+### Bug Fixes
+
+* **textfield:** render prefix before input ([#161](https://github.com/warp-ds/react/issues/161)) ([2017cff](https://github.com/warp-ds/react/commit/2017cff7a67be1b0cac958cf0e85907591d8e3e8))
+
+## [1.2.1-next.1](https://github.com/warp-ds/react/compare/v1.2.0...v1.2.1-next.1) (2023-11-08)
+
+
+### Bug Fixes
+
+* **combobox:** don't open on modifier key press and fix aria-expanded ([#152](https://github.com/warp-ds/react/issues/152)) ([71e42f6](https://github.com/warp-ds/react/commit/71e42f6ddd224c9b76cbf8d4db21fecf33b4e91e))
+
 # [1.2.0](https://github.com/warp-ds/react/compare/v1.1.1...v1.2.0) (2023-11-06)
 
 

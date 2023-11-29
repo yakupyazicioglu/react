@@ -12,14 +12,14 @@ import React, {
   useState,
 } from 'react';
 import { combobox as ccCombobox } from '@warp-ds/css/component-classes';
-import { TextField } from '../../textfield/src';
-import { useId } from '../../utils/src';
-import { ComboboxProps, OptionWithIdAndMatch } from './props';
-import { createOptionsWithIdAndMatch, getAriaText } from './utils';
+import { TextField } from '../../textfield/src/index.js';
+import { useId } from '../../utils/src/index.js';
+import { ComboboxProps, OptionWithIdAndMatch } from './props.js';
+import { createOptionsWithIdAndMatch, getAriaText } from './utils.js';
 import { messages as enMessages} from './locales/en/messages.mjs';
 import { messages as nbMessages} from './locales/nb/messages.mjs';
 import { messages as fiMessages} from './locales/fi/messages.mjs';
-import { activateI18n } from '../../i18n';
+import { activateI18n } from '../../i18n.js';
 
 const OPTION_CLASS_NAME = 'w-react-combobox-option';
 const MATCH_SEGMENTS_CLASS_NAME = 'w-react-combobox-match';
@@ -116,6 +116,8 @@ export const Combobox = forwardRef<HTMLInputElement, ComboboxProps>(
           navigationOption,
           currentOptions,
         });
+      } else if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) {
+        return;
       }
 
       // Other keys
@@ -198,7 +200,7 @@ export const Combobox = forwardRef<HTMLInputElement, ComboboxProps>(
       'aria-label': props['aria-label'],
       'aria-labelledby': props['aria-labelledby'],
       'aria-autocomplete': 'list',
-      'aria-expanded': !!navigationOption?.id,
+      'aria-expanded': isOpen && currentOptions.length !== 0,
       'aria-activedescendant': isOpen ? navigationOption?.id : undefined,
       'aria-controls': listboxId,
       onChange: function (e: ChangeEvent<HTMLInputElement>) {

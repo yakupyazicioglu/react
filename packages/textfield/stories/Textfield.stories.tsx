@@ -34,13 +34,13 @@ export const autoFocus = () => <TextField autoFocus />;
 
 export const clearPrefix = () => (
   <TextField>
-    <Affix prefix clear onClick={() => alert('clear')} />
+    <Affix prefix clear aria-label="Clear text" onClick={() => alert('clear')} />
   </TextField>
 );
 
 export const searchPrefix = () => (
   <TextField>
-    <Affix prefix search onClick={() => alert('search')} />
+    <Affix prefix search aria-label="Search" onClick={() => alert('search')} />
   </TextField>
 );
 
@@ -50,15 +50,21 @@ export const labelPrefix = () => (
   </TextField>
 );
 
+export const longLabelPrefix = () => (
+  <TextField className="[--w-prefix-width:90px]" value="With some value">
+    <Affix prefix label="Long prefix" />
+  </TextField>
+);
+
 export const clearSuffix = () => (
   <TextField>
-    <Affix suffix clear onClick={() => alert('clear')} />
+    <Affix suffix clear aria-label="Clear text" onClick={() => alert('clear')} />
   </TextField>
 );
 
 export const searchSuffix = () => (
   <TextField>
-    <Affix suffix search onClick={() => alert('search')} />
+    <Affix suffix search aria-label="Search" onClick={() => alert('search')} />
   </TextField>
 );
 
@@ -70,7 +76,7 @@ export const labelSuffix = () => (
 export const suffixAndPrefix = () => (
   <TextField>
     <Affix prefix label="kr" />
-    <Affix suffix clear onClick={() => alert('clear')} />
+    <Affix suffix clear aria-label="Clear text" onClick={() => alert('clear')} />
   </TextField>
 );
 

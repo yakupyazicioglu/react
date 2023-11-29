@@ -2,12 +2,12 @@ import React, { forwardRef } from 'react';
 import { i18n } from '@lingui/core';
 import { classNames } from '@chbphone55/classnames';
 import { input as ccInput, label as ccLabel, helpText as ccHelpText } from '@warp-ds/css/component-classes';
-import { useId } from '../../utils/src';
-import { TextFieldProps } from './props';
+import { useId } from '../../utils/src/index.js';
+import { TextFieldProps } from './props.js';
 import { messages as nbMessages} from './locales/nb/messages.mjs';
 import { messages as enMessages} from './locales/en/messages.mjs';
 import { messages as fiMessages} from './locales/fi/messages.mjs';
-import { activateI18n } from '../../i18n';
+import { activateI18n } from '../../i18n.js';
 
 export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
   (props, ref) => {
@@ -34,10 +34,10 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
     const helpId = helpText ? `${id}__hint` : undefined;
     const isInvalid = invalid || error;
 
-    const hasSuffix = React.Children.toArray(children).some(
+    const suffix = React.Children.toArray(children).find(
       (child) => React.isValidElement(child) && child.props.suffix,
     );
-    const hasPrefix = React.Children.toArray(children).some(
+    const prefix = React.Children.toArray(children).find(
       (child) => React.isValidElement(child) && child.props.prefix,
     );
 
@@ -46,6 +46,14 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           className={className}
           style={style}
         >
+          {/* we style input with prefix here because we cannot use arbitrary values with commas in UnoCSS like pl-[var(--w-prefix-width, 40px)] */}
+          <style>
+            {`
+              div+#${id}, button+#${id} {
+                padding-left:var(--w-prefix-width, 40px);
+              }
+            `}
+          </style>
           {label && (
             <label htmlFor={id} className={classNames({
               [ccLabel.label]: true,
@@ -66,6 +74,7 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
             </label>
           )}
           <div className={ccInput.wrapper}>
+            {prefix}
             <input
             className={classNames({
               [ccInput.default]: true,
@@ -73,8 +82,8 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
               [ccInput.disabled]: disabled,
               [ccInput.readOnly]: readOnly,
               [ccInput.placeholder]: !!props.placeholder,
-              [ccInput.suffix]: hasSuffix,
-              [ccInput.prefix]: hasPrefix,    
+              [ccInput.suffix]: !!suffix,
+              [ccInput.prefix]: !!prefix,    
             })}
               {...rest}
               aria-describedby={helpId}
@@ -86,7 +95,7 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
               ref={ref}
               type={type}
             />
-            {children}
+            {suffix}
           </div>
 
           {helpText && (
