@@ -1,3 +1,10 @@
+## [1.2.2-next.1](https://github.com/warp-ds/react/compare/v1.2.1...v1.2.2-next.1) (2023-12-18)
+
+
+### Bug Fixes
+
+* Improve exception handling in Tabs ([#184](https://github.com/warp-ds/react/issues/184)) ([488fdc4](https://github.com/warp-ds/react/commit/488fdc4ecdbe3fc1687d1622ae851b0bb5721a28))
+
 ## [1.2.1](https://github.com/warp-ds/react/compare/v1.2.0...v1.2.1) (2023-11-29)
 
 
