@@ -1,3 +1,17 @@
+## [1.2.2-next.2](https://github.com/warp-ds/react/compare/v1.2.2-next.1...v1.2.2-next.2) (2023-12-20)
+
+
+### Bug Fixes
+
+* **card:** set default background on unselected non-flat card ([#185](https://github.com/warp-ds/react/issues/185)) ([69e95e9](https://github.com/warp-ds/react/commit/69e95e9c0f4591d6775525c99a1ee46dfa0833ad))
+
+## [1.2.2-next.1](https://github.com/warp-ds/react/compare/v1.2.1...v1.2.2-next.1) (2023-12-18)
+
+
+### Bug Fixes
+
+* Improve exception handling in Tabs ([#184](https://github.com/warp-ds/react/issues/184)) ([488fdc4](https://github.com/warp-ds/react/commit/488fdc4ecdbe3fc1687d1622ae851b0bb5721a28))
+
 ## [1.2.1](https://github.com/warp-ds/react/compare/v1.2.0...v1.2.1) (2023-11-29)
 
 
