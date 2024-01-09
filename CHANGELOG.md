@@ -1,3 +1,10 @@
+# [1.3.0-next.2](https://github.com/warp-ds/react/compare/v1.3.0-next.1...v1.3.0-next.2) (2024-01-09)
+
+
+### Bug Fixes
+
+* replace letter x with icon close ([#188](https://github.com/warp-ds/react/issues/188)) ([8325571](https://github.com/warp-ds/react/commit/832557118f7bf321f1d4a30934f0a459492addfb))
+
 # [1.3.0-next.1](https://github.com/warp-ds/react/compare/v1.2.2...v1.3.0-next.1) (2024-01-09)
 
 
