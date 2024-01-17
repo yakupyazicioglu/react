@@ -45,4 +45,3 @@ import{c as r,j as e}from"./index-1PzaImZP.js";import{r as _}from"./index.m-0-FA
   </div>`,...(b=(h=n.parameters)==null?void 0:h.docs)==null?void 0:b.source}}};var f,x,B;o.parameters={...o.parameters,docs:{...(f=o.parameters)==null?void 0:f.docs,source:{originalSource:`() => <Badge as="span">
     A badge wrapped in a span tag
   </Badge>`,...(B=(x=o.parameters)==null?void 0:x.docs)==null?void 0:B.source}}};const R=["Default","Variants","Positions","As"];export{o as As,t as Default,n as Positions,s as Variants,R as __namedExportsOrder,E as default};
-//# sourceMappingURL=Badge.stories-pn-KuMoZ.js.map

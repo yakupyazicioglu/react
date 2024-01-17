@@ -12,4 +12,3 @@ import{j as m,n as p}from"./index-1PzaImZP.js";import{r as o}from"./index-Ainc_9
       <Slider onChange={val => setValue(val)} value={value} disabled min={1000} max={10_000_000} step={1000} />
     </div>;
 }`,...(K=(O=C.parameters)==null?void 0:O.docs)==null?void 0:K.source}}};const ae=["Regular","Disabled"];export{C as Disabled,k as Regular,ae as __namedExportsOrder,ne as default};
-//# sourceMappingURL=Slider.stories-SMCt5yw2.js.map

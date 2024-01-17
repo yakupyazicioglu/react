@@ -75,4 +75,3 @@ import{e as m,j as e}from"./index-1PzaImZP.js";import{r as b}from"./index-Ainc_9
 }`,...(E=(N=o.parameters)==null?void 0:N.docs)==null?void 0:E.source}}};var L,C,S;u.parameters={...u.parameters,docs:{...(L=u.parameters)==null?void 0:L.docs,source:{originalSource:`() => <Breadcrumbs>
     {["Page 1", "Current Page"]}
   </Breadcrumbs>`,...(S=(C=u.parameters)==null?void 0:C.docs)==null?void 0:S.source}}};const F=["BasicExample","ExampleWithArray","ExampleWithNestedArrays","ExampleWithStringArray"];export{c as BasicExample,l as ExampleWithArray,o as ExampleWithNestedArrays,u as ExampleWithStringArray,F as __namedExportsOrder,Y as default};
-//# sourceMappingURL=Breadcrumbs.stories-polPH2E3.js.map

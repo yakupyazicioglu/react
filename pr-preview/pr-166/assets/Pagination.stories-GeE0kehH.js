@@ -4,4 +4,3 @@ import{j as n,p as s}from"./index-1PzaImZP.js";import{R as o,r as B}from"./index
     <Example initialPage={10} lastPage={20} aria-labelledby="pagination-2" />
     <Example initialPage={30} lastPage={30} aria-labelledby="pagination-3" />
   </>`,...(R=(D=y.parameters)==null?void 0:D.docs)==null?void 0:R.source}}};const Qe=["Normal"];export{y as Normal,Qe as __namedExportsOrder,ze as default};
-//# sourceMappingURL=Pagination.stories-GeE0kehH.js.map

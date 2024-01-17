@@ -84,4 +84,3 @@ Defaults to the first tab if not present and isActive is not set on any Tab.`,na
       </div>
     </>;
 }`,...(ee=(Z=E.parameters)==null?void 0:Z.docs)==null?void 0:ee.source}}};const ue=["Default","DefaultWithPanel","DefaultWithOnClickAction","Icon","IconOvertop","IconWithPanel"];export{I as Default,_ as DefaultWithOnClickAction,N as DefaultWithPanel,S as Icon,q as IconOvertop,E as IconWithPanel,ue as __namedExportsOrder,be as default};
-//# sourceMappingURL=Tabs.stories-u1YU7Xdp.js.map

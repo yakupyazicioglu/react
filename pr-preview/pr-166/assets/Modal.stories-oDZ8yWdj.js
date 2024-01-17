@@ -139,4 +139,3 @@ import{j as u,m as v}from"./index-1PzaImZP.js";import{r as c,R as Ge}from"./inde
       </Modal>
     </>;
 }`,...(Ve=(qe=U.parameters)==null?void 0:qe.docs)==null?void 0:Ve.source}}};const Dr=["Example","WithBackAndCloseButton","MustConfirmToProceed","InitialFocus","Overflowing"];export{P as Example,W as InitialFocus,H as MustConfirmToProceed,U as Overflowing,L as WithBackAndCloseButton,Dr as __namedExportsOrder,jr as default};
-//# sourceMappingURL=Modal.stories-oDZ8yWdj.js.map

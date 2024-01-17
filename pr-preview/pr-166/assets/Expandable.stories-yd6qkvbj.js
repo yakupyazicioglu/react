@@ -34,4 +34,3 @@ If headingLevel is not specified, the button will not be wrapped by a heading el
       <h2>I am expandable</h2>
     </Expandable>;
 }`,...(ae=(ee=v.parameters)==null?void 0:ee.docs)==null?void 0:ae.source}}};const Ge=["Default","Box","BoxWithCustomIcon","InfoBox","Controlled","NoChevron","Animated","AnimatedExpanded","Heading"];export{f as Animated,b as AnimatedExpanded,p as Box,u as BoxWithCustomIcon,h as Controlled,c as Default,v as Heading,m as InfoBox,x as NoChevron,Ge as __namedExportsOrder,Fe as default};
-//# sourceMappingURL=Expandable.stories-yd6qkvbj.js.map
