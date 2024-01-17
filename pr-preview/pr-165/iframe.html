@@ -18,9 +18,11 @@
     window.LOGLEVEL = 'info';
     window.FRAMEWORK_OPTIONS = {};
     window.CHANNEL_OPTIONS = {};
-    window.FEATURES = {"warnOnLegacyHierarchySeparator":true,"buildStoriesJson":false,"storyStoreV7":true,"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false};
+    window.FEATURES = {"warnOnLegacyHierarchySeparator":true,"buildStoriesJson":false,"storyStoreV7":true,"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false,"disallowImplicitActionsInRenderV8":false};
     window.STORIES = [{"titlePrefix":"","directory":"./packages","files":"**/*.stories.[tj]sx","importPathMatcher":"^\\.[\\\\/](?:packages(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.stories\\.(?:\\[tj\\]|[tj])sx)$"}];
-    window.DOCS_OPTIONS = {"autodocs":true};
+    window.DOCS_OPTIONS = {"autodocs":false};
+
+    
 
     // We do this so that "module && module.hot" etc. in Storybook source code
     // doesn't fail (it will simply be disabled)
@@ -364,7 +366,7 @@
   document.documentElement.setAttribute("lang", 'en');
 </script>
 
-  <script type="module" crossorigin src="./assets/iframe-ac4ca7f5.js"></script>
+  <script type="module" crossorigin src="./assets/iframe-0ef00f11.js"></script>
 </head>
 
 <body>
