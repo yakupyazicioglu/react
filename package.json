@@ -25,7 +25,7 @@
     "react": "17.0.2"
   },
   "scripts": {
-    "build-storybook": "storybook build",
+    "build-storybook": "storybook build && touch ./storybook-static/.nojekyll",
     "build:clean": "rm -rf dist",
     "build:eik": "node esbuild.mjs 17 && node esbuild.mjs 18",
     "build:node": "npx esbuild ./packages/index.ts --outdir=dist/npm --out-extension:.js=.cjs --target=es2017 --bundle --sourcemap --format=cjs --external:react",
