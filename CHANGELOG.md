@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/warp-ds/react/compare/v1.3.1...v1.3.2) (2024-01-25)
+
+
+### Bug Fixes
+
+* reference useId in a way compatible with React 17 ([#197](https://github.com/warp-ds/react/issues/197)) ([9c00888](https://github.com/warp-ds/react/commit/9c00888b5e55f5871b4f884fa5ad7a2090e98ae1))
+
 ## [1.3.1](https://github.com/warp-ds/react/compare/v1.3.0...v1.3.1) (2024-01-25)
 
 
