@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/warp-ds/react/compare/v1.3.0...v1.3.1) (2024-01-25)
+
+
+### Bug Fixes
+
+* SSR compatibility for textfield ([#195](https://github.com/warp-ds/react/issues/195)) ([7779237](https://github.com/warp-ds/react/commit/77792373fb32d5ec89005a3cafa0ef1eb78aa122))
+
 ## [1.3.1-next.1](https://github.com/warp-ds/react/compare/v1.3.0...v1.3.1-next.1) (2024-01-24)
 
 
