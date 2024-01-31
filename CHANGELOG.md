@@ -1,3 +1,10 @@
+## [1.3.3-next.1](https://github.com/warp-ds/react/compare/v1.3.2...v1.3.3-next.1) (2024-01-31)
+
+
+### Bug Fixes
+
+* bump scroll-doctor lib to fix modal issue with scrollbars ([#199](https://github.com/warp-ds/react/issues/199)) ([e4bb6e9](https://github.com/warp-ds/react/commit/e4bb6e9f9d68d3eb2868a2c8822d4cbbb0600f91))
+
 ## [1.3.2](https://github.com/warp-ds/react/compare/v1.3.1...v1.3.2) (2024-01-25)
 
 
