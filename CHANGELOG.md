@@ -1,3 +1,17 @@
+# [1.4.0-next.1](https://github.com/warp-ds/react/compare/v1.3.3-next.1...v1.4.0-next.1) (2024-02-05)
+
+
+### Features
+
+* **modal:** add onLeftClick prop to control left button event-handling ([#200](https://github.com/warp-ds/react/issues/200)) ([96a750b](https://github.com/warp-ds/react/commit/96a750b1303cb8db7fb767f22c43d5dd3717e206))
+
+## [1.3.3-next.1](https://github.com/warp-ds/react/compare/v1.3.2...v1.3.3-next.1) (2024-01-31)
+
+
+### Bug Fixes
+
+* bump scroll-doctor lib to fix modal issue with scrollbars ([#199](https://github.com/warp-ds/react/issues/199)) ([e4bb6e9](https://github.com/warp-ds/react/commit/e4bb6e9f9d68d3eb2868a2c8822d4cbbb0600f91))
+
 ## [1.3.2](https://github.com/warp-ds/react/compare/v1.3.1...v1.3.2) (2024-01-25)
 
 
