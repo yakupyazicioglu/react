@@ -1,3 +1,10 @@
+# [1.4.0-next.1](https://github.com/warp-ds/react/compare/v1.3.3-next.1...v1.4.0-next.1) (2024-02-05)
+
+
+### Features
+
+* **modal:** add onLeftClick prop to control left button event-handling ([#200](https://github.com/warp-ds/react/issues/200)) ([96a750b](https://github.com/warp-ds/react/commit/96a750b1303cb8db7fb767f22c43d5dd3717e206))
+
 ## [1.3.3-next.1](https://github.com/warp-ds/react/compare/v1.3.2...v1.3.3-next.1) (2024-01-31)
 
 
