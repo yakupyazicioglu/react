@@ -1,3 +1,10 @@
+## [1.4.1-next.1](https://github.com/warp-ds/react/compare/v1.4.0...v1.4.1-next.1) (2024-02-06)
+
+
+### Bug Fixes
+
+* bump deps ([#202](https://github.com/warp-ds/react/issues/202)) ([f5650c1](https://github.com/warp-ds/react/commit/f5650c192850182b7aa7163507098c722cdbf496))
+
 # [1.4.0](https://github.com/warp-ds/react/compare/v1.3.2...v1.4.0) (2024-02-05)
 
 
