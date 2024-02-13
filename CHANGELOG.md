@@ -1,3 +1,10 @@
+## [1.4.1-next.2](https://github.com/warp-ds/react/compare/v1.4.1-next.1...v1.4.1-next.2) (2024-02-13)
+
+
+### Bug Fixes
+
+* rename deleted icons after @warp-ds/icons update to 2.0.0 ([#205](https://github.com/warp-ds/react/issues/205)) ([121bd55](https://github.com/warp-ds/react/commit/121bd554de5094ef6b73a6ee3340a456d0304e98))
+
 ## [1.4.1-next.1](https://github.com/warp-ds/react/compare/v1.4.0...v1.4.1-next.1) (2024-02-06)
 
 
