@@ -1,3 +1,10 @@
+## [1.4.2-next.2](https://github.com/warp-ds/react/compare/v1.4.2-next.1...v1.4.2-next.2) (2024-02-15)
+
+
+### Bug Fixes
+
+* Update warp-ds/css dependency ([#211](https://github.com/warp-ds/react/issues/211)) ([18feabb](https://github.com/warp-ds/react/commit/18feabbb72897b5f604e986f5df297924c337e56))
+
 ## [1.4.2-next.1](https://github.com/warp-ds/react/compare/v1.4.1...v1.4.2-next.1) (2024-02-15)
 
 
