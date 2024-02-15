@@ -1,3 +1,10 @@
+## [1.4.1-next.4](https://github.com/warp-ds/react/compare/v1.4.1-next.3...v1.4.1-next.4) (2024-02-15)
+
+
+### Bug Fixes
+
+* **pagination:** use styled anchors instead of Button Pill ([#206](https://github.com/warp-ds/react/issues/206)) ([c0ae4e6](https://github.com/warp-ds/react/commit/c0ae4e66753531e33d0ce0e36f19865a63314d5f))
+
 ## [1.4.1-next.3](https://github.com/warp-ds/react/compare/v1.4.1-next.2...v1.4.1-next.3) (2024-02-15)
 
 
