@@ -1,3 +1,13 @@
+## [1.4.1](https://github.com/warp-ds/react/compare/v1.4.0...v1.4.1) (2024-02-15)
+
+
+### Bug Fixes
+
+* bump deps ([#202](https://github.com/warp-ds/react/issues/202)) ([f5650c1](https://github.com/warp-ds/react/commit/f5650c192850182b7aa7163507098c722cdbf496))
+* **pagination:** use styled anchors instead of Button Pill ([#206](https://github.com/warp-ds/react/issues/206)) ([c0ae4e6](https://github.com/warp-ds/react/commit/c0ae4e66753531e33d0ce0e36f19865a63314d5f))
+* Remove redundant component css class from modal backdrop ([#207](https://github.com/warp-ds/react/issues/207)) ([ef37ae0](https://github.com/warp-ds/react/commit/ef37ae07f4ab911cb4552c8853b612e9458f7dec))
+* rename deleted icons after @warp-ds/icons update to 2.0.0 ([#205](https://github.com/warp-ds/react/issues/205)) ([121bd55](https://github.com/warp-ds/react/commit/121bd554de5094ef6b73a6ee3340a456d0304e98))
+
 ## [1.4.1-next.4](https://github.com/warp-ds/react/compare/v1.4.1-next.3...v1.4.1-next.4) (2024-02-15)
 
 
