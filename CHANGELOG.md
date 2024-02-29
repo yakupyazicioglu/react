@@ -1,3 +1,10 @@
+## [1.4.3-next.1](https://github.com/warp-ds/react/compare/v1.4.2...v1.4.3-next.1) (2024-02-29)
+
+
+### Bug Fixes
+
+* **useId:** return fallback ID for React v17 ([#218](https://github.com/warp-ds/react/issues/218)) ([ba4f0f0](https://github.com/warp-ds/react/commit/ba4f0f0f036f87acf14fe0987194bba3f9b8d765))
+
 ## [1.4.2](https://github.com/warp-ds/react/compare/v1.4.1...v1.4.2) (2024-02-15)
 
 
