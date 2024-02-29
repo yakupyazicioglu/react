@@ -1,3 +1,10 @@
+## [1.4.3-next.2](https://github.com/warp-ds/react/compare/v1.4.3-next.1...v1.4.3-next.2) (2024-02-29)
+
+
+### Bug Fixes
+
+* **modal:** cleanup scroll lock when modal component unmounts ([#217](https://github.com/warp-ds/react/issues/217)) ([6126da1](https://github.com/warp-ds/react/commit/6126da1a1e391b2fe1d03f09b6600ffec3504542))
+
 ## [1.4.3-next.1](https://github.com/warp-ds/react/compare/v1.4.2...v1.4.3-next.1) (2024-02-29)
 
 
