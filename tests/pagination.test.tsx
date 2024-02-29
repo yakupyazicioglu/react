@@ -2,7 +2,7 @@ import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { Pagination } from '../../packages/pagination/src/index.js';
+import { Pagination } from '../packages/pagination/src/index.js';
 
 const onChangeFunction = vi.fn();
 

@@ -17,7 +17,7 @@ export default function config(env) {
       environment: 'happy-dom',
       globals: true,
       setupFiles: ['./setup.ts'],
-      include: ['./tests/components/**'],
+      include: ['./tests/**.test.tsx'],
       exclude: ['**.json'],
       coverage: {
         cleanOnRerun: true,
