@@ -119,7 +119,9 @@ export const Button = forwardRef<
   return (
     <>
       {props.href ? (
+        // @ts-ignore
         <a
+          {...rest}
           onClick={handleClick}
           aria-current={props['aria-current']}
           href={props.disabled ? undefined : props.href}
@@ -138,7 +140,6 @@ export const Button = forwardRef<
         </a>
       ) : (
         <button
-          {...rest}
           type={props.type || 'button'}
           ref={ref as Ref<HTMLButtonElement>}
           className={classes}
