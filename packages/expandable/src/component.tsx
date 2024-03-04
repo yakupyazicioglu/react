@@ -49,6 +49,7 @@ export function Expandable(props: ExpandableProps) {
       className={classNames(className, {
         [ccExpandable.expandable]: true,
         [ccExpandable.expandableBox]: box,
+        [ccExpandable.expandableInfo]: info,
         [ccExpandable.expandableBleed]: bleed,
       })}
     >
