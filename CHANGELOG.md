@@ -1,3 +1,24 @@
+## [1.4.3-next.3](https://github.com/warp-ds/react/compare/v1.4.3-next.2...v1.4.3-next.3) (2024-03-07)
+
+
+### Bug Fixes
+
+* **toggle:** fix styling in different states ([#221](https://github.com/warp-ds/react/issues/221)) ([efead37](https://github.com/warp-ds/react/commit/efead37b60a00e37e5b2ff22a81a06c5611de4a9))
+
+## [1.4.3-next.2](https://github.com/warp-ds/react/compare/v1.4.3-next.1...v1.4.3-next.2) (2024-02-29)
+
+
+### Bug Fixes
+
+* **modal:** cleanup scroll lock when modal component unmounts ([#217](https://github.com/warp-ds/react/issues/217)) ([6126da1](https://github.com/warp-ds/react/commit/6126da1a1e391b2fe1d03f09b6600ffec3504542))
+
+## [1.4.3-next.1](https://github.com/warp-ds/react/compare/v1.4.2...v1.4.3-next.1) (2024-02-29)
+
+
+### Bug Fixes
+
+* **useId:** return fallback ID for React v17 ([#218](https://github.com/warp-ds/react/issues/218)) ([ba4f0f0](https://github.com/warp-ds/react/commit/ba4f0f0f036f87acf14fe0987194bba3f9b8d765))
+
 ## [1.4.2](https://github.com/warp-ds/react/compare/v1.4.1...v1.4.2) (2024-02-15)
 
 
