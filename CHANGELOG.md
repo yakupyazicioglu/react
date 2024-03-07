@@ -1,3 +1,10 @@
+## [1.4.3-next.3](https://github.com/warp-ds/react/compare/v1.4.3-next.2...v1.4.3-next.3) (2024-03-07)
+
+
+### Bug Fixes
+
+* **toggle:** fix styling in different states ([#221](https://github.com/warp-ds/react/issues/221)) ([efead37](https://github.com/warp-ds/react/commit/efead37b60a00e37e5b2ff22a81a06c5611de4a9))
+
 ## [1.4.3-next.2](https://github.com/warp-ds/react/compare/v1.4.3-next.1...v1.4.3-next.2) (2024-02-29)
 
 
