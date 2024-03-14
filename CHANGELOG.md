@@ -1,3 +1,10 @@
+## [1.4.4-next.1](https://github.com/warp-ds/react/compare/v1.4.3...v1.4.4-next.1) (2024-03-14)
+
+
+### Bug Fixes
+
+* **dead-toggle:** add 'name' prop ([#223](https://github.com/warp-ds/react/issues/223)) ([2ff3ad7](https://github.com/warp-ds/react/commit/2ff3ad70da1b51d1c8f3f5d917e37e51b97e3c57))
+
 ## [1.4.3](https://github.com/warp-ds/react/compare/v1.4.2...v1.4.3) (2024-03-07)
 
 
