@@ -1,3 +1,10 @@
+## [1.4.4-next.2](https://github.com/warp-ds/react/compare/v1.4.4-next.1...v1.4.4-next.2) (2024-03-20)
+
+
+### Bug Fixes
+
+* **forms:** use correct colors in label and error text ([#225](https://github.com/warp-ds/react/issues/225)) ([ac5396b](https://github.com/warp-ds/react/commit/ac5396b7b69b01c22158045272359b2bac8a7981))
+
 ## [1.4.4-next.1](https://github.com/warp-ds/react/compare/v1.4.3...v1.4.4-next.1) (2024-03-14)
 
 
