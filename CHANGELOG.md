@@ -1,3 +1,10 @@
+# [1.5.0-next.1](https://github.com/warp-ds/react/compare/v1.4.5-next.1...v1.5.0-next.1) (2024-04-16)
+
+
+### Features
+
+* Add more features on how attention component is positioned ([#215](https://github.com/warp-ds/react/issues/215)) ([5bf7883](https://github.com/warp-ds/react/commit/5bf7883833ded3cbc05b046fd82330b3062aebc9))
+
 ## [1.4.5-next.1](https://github.com/warp-ds/react/compare/v1.4.4...v1.4.5-next.1) (2024-04-16)
 
 
