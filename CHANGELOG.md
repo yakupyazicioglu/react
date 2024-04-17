@@ -1,3 +1,10 @@
+# [1.5.0-next.2](https://github.com/warp-ds/react/compare/v1.5.0-next.1...v1.5.0-next.2) (2024-04-17)
+
+
+### Features
+
+* Add an optional prop to enable nofollow for pagination component ([#231](https://github.com/warp-ds/react/issues/231)) ([9534ae3](https://github.com/warp-ds/react/commit/9534ae3295e041b1143d5ba2c9c827df082959b2))
+
 # [1.5.0-next.1](https://github.com/warp-ds/react/compare/v1.4.5-next.1...v1.5.0-next.1) (2024-04-16)
 
 
