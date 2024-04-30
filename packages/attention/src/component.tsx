@@ -50,6 +50,7 @@ export function Attention(props: AttentionProps) {
     distance = 8,
     skidding = 0,
     flip = false,
+    crossAxis = false,
     fallbackPlacements,
     ...rest
   } = props
@@ -109,6 +110,9 @@ export function Attention(props: AttentionProps) {
     get flip() {
       return flip
     },
+    get crossAxis() {
+      return crossAxis
+    },
     get fallbackPlacements() {
       return fallbackPlacements
     },
@@ -137,6 +141,7 @@ export function Attention(props: AttentionProps) {
   useAutoUpdatePosition(targetEl, isShowing, attentionEl, autoUpdatePosition, attentionState)
   
   return (
+    (!props.callout && props.targetEl === undefined) ? null : (
     <div
       data-testid='attention-el'
       className={classNames(
@@ -185,6 +190,7 @@ export function Attention(props: AttentionProps) {
         )}
       </div>
     </div>
+    )
   )
 }
 

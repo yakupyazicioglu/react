@@ -156,6 +156,35 @@ describe('Attention component', () => {
   })
 })
 
+describe('targetEl', () => {
+  it('should not render Attention component when callout is false and targetEl is undefined', () => {
+    render(
+      <Attention highlight placement='bottom'>
+        <p>I am a highlight</p>
+      </Attention>
+    );
+    const attentionEl = screen.queryByTestId('attention-el');
+    expect(attentionEl).toBeNull();
+  });
+  it('should render Attention component when callout is true, even though targetEl is undefined', () => {
+    render(
+      <Attention callout placement='right'>
+        <p>I am a callout</p>
+      </Attention>
+    );
+    const attentionEl = screen.getByTestId('attention-el');
+    expect(attentionEl).toBeInTheDocument();
+  });
+  it('should render Attention component when targetEl is defined and callout is false', () => {
+    render(
+      <Attention popover placement='top-start' targetEl={mockTargetEl}>
+        <p>I am a popover</p>
+      </Attention>
+    );
+    const attentionEl = screen.getByTestId('attention-el');
+    expect(attentionEl).toBeInTheDocument();
+  });
+})
 describe('useEffect for autoUpdatePosition', () => {
   it('should call autoUpdatePosition when isShowing, targetEl, and attenttionEl are defined', () => {
     const targetEl: any = document.createElement('div')
@@ -354,7 +383,7 @@ describe('Different variants of Attention component', () => {
 
   it('should show Attention component as a highlight', () => {
     render(
-      <Attention highlight placement='bottom'>
+      <Attention highlight placement='bottom' targetEl={mockTargetEl}>
         <p>I am a highlight</p>
       </Attention>
     )
@@ -363,7 +392,7 @@ describe('Different variants of Attention component', () => {
   })
   it('should show Attention component as a tooltip', () => {
     render(
-      <Attention tooltip placement='top'>
+      <Attention tooltip placement='top' targetEl={mockTargetEl}>
         <p>I am a tooltip</p>
       </Attention>
     )
@@ -372,7 +401,7 @@ describe('Different variants of Attention component', () => {
   })
   it('should show Attention component as a popover', () => {
     render(
-      <Attention popover placement='bottom'>
+      <Attention popover placement='bottom' targetEl={mockTargetEl}>
         <p>I am a popover</p>
       </Attention>
     )
@@ -381,7 +410,7 @@ describe('Different variants of Attention component', () => {
   })
   it('should not show Attention component as a popover', () => {
     render(
-      <Attention tooltip placement='bottom'>
+      <Attention tooltip placement='bottom' targetEl={mockTargetEl}>
         <p>I am a NOT a popover</p>
       </Attention>
     )
@@ -393,7 +422,7 @@ describe('Different variants of Attention component', () => {
 describe('ArrowEl', () => {
   it('should position the arrowEl of the AttentionEl on the opposite side of depending on the placement prop', () => {
     render(
-      <Attention popover placement='right'>
+      <Attention popover placement='right' targetEl={mockTargetEl}>
         <p>I am a popover on the left</p>
       </Attention>
     )
@@ -402,7 +431,7 @@ describe('ArrowEl', () => {
   })
   it('should position the arrowEl of the AttentionEl on the opposite side of depending on the placement prop', () => {
     render(
-      <Attention popover placement='bottom'>
+      <Attention popover placement='bottom' targetEl={mockTargetEl}>
         <p>I am a popover on the left</p>
       </Attention>
     )
@@ -411,7 +440,7 @@ describe('ArrowEl', () => {
   })
   it('should not position the arrowEl to the top if AttentionEl has placement="right"', () => {
     render(
-      <Attention popover placement='right'>
+      <Attention popover placement='right' targetEl={mockTargetEl}>
         <p>I am a popover on the left</p>
       </Attention>
     )
@@ -423,7 +452,7 @@ describe('ArrowEl', () => {
 describe('Usage of aria-label attribute', () => {
   it('renders popover with default aria-label', () => {
     render(
-      <Attention popover isShowing={true}>
+      <Attention popover isShowing={true} targetEl={mockTargetEl}>
         <p>I am a popover with default aria-label</p>
       </Attention>
     )
@@ -435,7 +464,7 @@ describe('Usage of aria-label attribute', () => {
 
   it('renders tooltip with default aria-label', () => {
     render(
-      <Attention tooltip isShowing={true}>
+      <Attention tooltip isShowing={true} targetEl={mockTargetEl}>
         <p>I am a tooltip with default aria-label</p>
       </Attention>
     )
@@ -459,7 +488,7 @@ describe('Usage of aria-label attribute', () => {
 
   it('renders highlight with default aria-label', () => {
     render(
-      <Attention highlight isShowing={true}>
+      <Attention highlight isShowing={true} targetEl={mockTargetEl}>
         <p>I am a highlight with default aria-label</p>
       </Attention>
     )
@@ -471,7 +500,7 @@ describe('Usage of aria-label attribute', () => {
 
   it('renders highlight with updated default aria-label when setting placement prop', () => {
     render(
-      <Attention highlight placement='left' isShowing={true}>
+      <Attention highlight placement='left' isShowing={true} targetEl={mockTargetEl}>
         <p>I am a highlight with default aria-label</p>
       </Attention>
     )
@@ -483,7 +512,7 @@ describe('Usage of aria-label attribute', () => {
 
   it('renders popover with resetted aria-label', () => {
     render(
-      <Attention popover isShowing={true} aria-label=''>
+      <Attention popover isShowing={true} aria-label='' targetEl={mockTargetEl}>
         <p>I am a popover with resetted aria-label</p>
       </Attention>
     )
@@ -497,7 +526,7 @@ describe('Usage of aria-label attribute', () => {
 describe('Usage of role attribute', () => {
   it('renders with role set to "tooltip" if tooltip', () => {
     render(
-      <Attention tooltip isShowing={true}>
+      <Attention tooltip isShowing={true} targetEl={mockTargetEl}>
         <p>I am a tooltip</p>
       </Attention>
     )
@@ -507,7 +536,7 @@ describe('Usage of role attribute', () => {
 
   it('renders popover with role set to "img" if not tooltip', () => {
     render(
-      <Attention popover isShowing={true}>
+      <Attention popover isShowing={true} targetEl={mockTargetEl}>
         <p>I am a popover with img role</p>
       </Attention>
     )
@@ -517,7 +546,7 @@ describe('Usage of role attribute', () => {
 
   it('renders popover with resetted role', () => {
     render(
-      <Attention popover isShowing={true} role=''>
+      <Attention popover isShowing={true} role='' targetEl={mockTargetEl}>
         <p>I am a popover with resetted role</p>
       </Attention>
     )
