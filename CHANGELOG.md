@@ -1,3 +1,10 @@
+# [1.5.0-next.4](https://github.com/warp-ds/react/compare/v1.5.0-next.3...v1.5.0-next.4) (2024-04-30)
+
+
+### Features
+
+* add more functionality to attention component ([#233](https://github.com/warp-ds/react/issues/233)) ([95c20b3](https://github.com/warp-ds/react/commit/95c20b3da5d6b361724011171393b0b749317b0e))
+
 # [1.5.0-next.3](https://github.com/warp-ds/react/compare/v1.5.0-next.2...v1.5.0-next.3) (2024-04-18)
 
 
