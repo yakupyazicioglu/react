@@ -1,13 +1,13 @@
 import * as React from 'react';
+
 import { render } from '@testing-library/react';
+
 import { TextField } from '../src';
 
 describe('TextField', () => {
   test('renders with placeholder text', () => {
     const placeholder = 'placeholder';
-    const tree = render(
-      <TextField aria-label="label" placeholder={placeholder} />,
-    );
+    const tree = render(<TextField aria-label="label" placeholder={placeholder} />);
     const input = tree.getByPlaceholderText(placeholder);
     expect(input).toBeTruthy();
     // @ts-ignore

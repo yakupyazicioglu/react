@@ -1,7 +1,9 @@
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+
 import { classNames } from '@chbphone55/classnames';
 import { createHandlers, useDimensions } from '@warp-ds/core/slider';
 import { slider as ccSlider } from '@warp-ds/css/component-classes';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+
 import { SliderProps } from './props.js';
 
 export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
@@ -59,16 +61,8 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
     },
   };
 
-  const {
-    handleKeyDown,
-    handleFocus,
-    handleBlur,
-    handleMouseDown,
-    handleClick,
-    getThumbPosition,
-    getThumbTransform,
-    getShiftedChange,
-  } = createHandlers({ props: { min, max, ...rest }, sliderState });
+  const { handleKeyDown, handleFocus, handleBlur, handleMouseDown, handleClick, getThumbPosition, getThumbTransform, getShiftedChange } =
+    createHandlers({ props: { min, max, ...rest }, sliderState });
 
   const thumbPosition = useMemo(getThumbPosition, [getThumbPosition]);
   const sliderActiveStyle = useMemo(
@@ -76,7 +70,7 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
       left: 0,
       right: 100 - thumbPosition + '%',
     }),
-    [thumbPosition]
+    [thumbPosition],
   );
 
   const transformValue = useMemo(getThumbTransform, [getThumbTransform]);
@@ -84,7 +78,7 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
     () => ({
       transform: 'translateX(' + transformValue + 'px)',
     }),
-    [transformValue]
+    [transformValue],
   );
 
   useEffect(() => {
@@ -97,8 +91,9 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
   }, [position, rest.value, rest.step]);
 
   useEffect(() => {
-    if (sliderPressed || position === rest.value || value === rest.value)
+    if (sliderPressed || position === rest.value || value === rest.value) {
       return;
+    }
     setPosition(rest.value);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sliderPressed, rest.value]);
@@ -147,8 +142,7 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
         onFocus={handleFocus}
         onKeyDown={(e) => {
           handleKeyDown(e as unknown as KeyboardEvent);
-        }}
-      ></div>
+        }}></div>
     </div>
   );
 }

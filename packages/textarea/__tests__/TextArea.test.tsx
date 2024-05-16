@@ -1,5 +1,7 @@
 import * as React from 'react';
+
 import { render } from '@testing-library/react';
+
 import { TextArea } from '../src';
 
 // TODO: Write tests for `maximumRows` and `minimumRows`
@@ -7,9 +9,7 @@ import { TextArea } from '../src';
 describe('TextArea', () => {
   test('renders with placeholder text', () => {
     const placeholder = 'placeholder';
-    const tree = render(
-      <TextArea aria-label="label" placeholder={placeholder} />,
-    );
+    const tree = render(<TextArea aria-label="label" placeholder={placeholder} />);
     const input = tree.getByPlaceholderText(placeholder);
     expect(input).toBeTruthy();
     // @ts-ignore
