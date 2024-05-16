@@ -1,3 +1,10 @@
+# [1.6.0-next.1](https://github.com/warp-ds/react/compare/v1.5.0...v1.6.0-next.1) (2024-05-16)
+
+
+### Features
+
+* add warp ds eslint config ([#238](https://github.com/warp-ds/react/issues/238)) ([d83f799](https://github.com/warp-ds/react/commit/d83f79969a877b533ff288f2238663035398f6ac))
+
 # [1.5.0](https://github.com/warp-ds/react/compare/v1.4.4...v1.5.0) (2024-05-15)
 
 
