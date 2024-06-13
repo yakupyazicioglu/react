@@ -48,7 +48,8 @@ const setup = (props) => {
     },
     wrapperClasses: classNames(ccSelect.wrapper, className),
     selectClasses: classNames({
-      [ccSelect.default]: true,
+      [ccSelect.base]: true,
+      [ccSelect.default]: !invalid && !disabled && !readOnly,
       [ccSelect.invalid]: invalid,
       [ccSelect.disabled]: disabled,
       [ccSelect.readOnly]: readOnly,
