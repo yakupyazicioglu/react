@@ -1,3 +1,17 @@
+# [1.6.0-next.3](https://github.com/warp-ds/react/compare/v1.6.0-next.2...v1.6.0-next.3) (2024-06-12)
+
+
+### Features
+
+* slider onChangeAfter prop ([#247](https://github.com/warp-ds/react/issues/247)) ([fa1af5c](https://github.com/warp-ds/react/commit/fa1af5c7a33fc5071c26b5652bf46bffa6413408))
+
+# [1.6.0-next.2](https://github.com/warp-ds/react/compare/v1.6.0-next.1...v1.6.0-next.2) (2024-06-05)
+
+
+### Features
+
+* **toggle:** add ReactNode type to toggle labels ([#244](https://github.com/warp-ds/react/issues/244)) ([abeff99](https://github.com/warp-ds/react/commit/abeff999329000607703224fc5b7843379420b04))
+
 # [1.6.0-next.1](https://github.com/warp-ds/react/compare/v1.5.0...v1.6.0-next.1) (2024-05-16)
 
 
