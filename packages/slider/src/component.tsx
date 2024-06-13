@@ -6,6 +6,25 @@ import { slider as ccSlider } from '@warp-ds/css/component-classes';
 
 import { SliderProps } from './props.js';
 
+const useHandlers = (min,max,rest,sliderState) => {
+  const [handlers, setHandlers] = useState<any>({
+    handleKeyDown: null,
+    handleFocus: null,
+    handleBlur: null,
+    handleMouseDown: null,
+    handleClick: null,
+    getThumbPosition: null,
+    getThumbTransform: null,
+    getShiftedChange: null
+  });
+
+  useEffect(() => {
+    setHandlers((prev) => ({ ...prev, ...createHandlers({ props: { min, max, ...rest }, sliderState })}));
+  }, []);
+
+  return handlers;
+};
+
 export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
   const { disabled, onChange, onChangeAfter } = rest;
 
@@ -67,9 +86,9 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
   };
 
   const { handleKeyDown, handleFocus, handleBlur, handleMouseDown, handleClick, getThumbPosition, getThumbTransform, getShiftedChange } =
-    createHandlers({ props: { min, max, ...rest }, sliderState });
+    useHandlers(min, max, rest, sliderState);
 
-  const thumbPosition = useMemo(getThumbPosition, [getThumbPosition]);
+  const thumbPosition = useMemo<number>(() => getThumbPosition?.() ?? 0, [getThumbPosition]);
   const sliderActiveStyle = useMemo(
     () => ({
       left: 0,
@@ -78,7 +97,7 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
     [thumbPosition],
   );
 
-  const transformValue = useMemo(getThumbTransform, [getThumbTransform]);
+  const transformValue = useMemo(() => getThumbTransform?.() ?? 0, [getThumbTransform]);
   const thumbStyles = useMemo(
     () => ({
       transform: 'translateX(' + transformValue + 'px)',
@@ -89,11 +108,11 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
   useEffect(() => {
     // prevents shiftedChange when modelValue was set externally
     if (position === rest.value) return;
-    const n = rest.step ? getShiftedChange(position) : position;
+    const n = rest.step ? getShiftedChange?.(position) ?? 0 : position;
     if (value === n) return;
     setValue(n);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [position, rest.value, rest.step]);
+  }, [position, rest.value, rest.step, getShiftedChange]);
 
   useEffect(() => {
     if (sliderPressed || position === rest.value || value === rest.value) {
@@ -137,16 +156,17 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
         aria-valuemax={max}
         aria-valuenow={value}
         aria-valuetext={rest['aria-valuetext']}
+        aria-disabled={disabled}
         onMouseDown={(e) => {
-          handleMouseDown(e as unknown as KeyboardEvent);
+          handleMouseDown?.(e as unknown as KeyboardEvent);
         }}
         onTouchStart={(e) => {
-          handleMouseDown(e as unknown as KeyboardEvent);
+          handleMouseDown?.(e as unknown as KeyboardEvent);
         }}
         onBlur={handleBlur}
         onFocus={handleFocus}
         onKeyDown={(e) => {
-          handleKeyDown(e as unknown as KeyboardEvent);
+          handleKeyDown?.(e as unknown as KeyboardEvent);
         }}></div>
     </div>
   );

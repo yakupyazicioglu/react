@@ -20,6 +20,9 @@ export type SliderProps = {
   /** Whether the slider is disabled */
   disabled?: boolean;
 
+  /** Whether to prevent keydown acceleration */
+  preventAcceleration?: boolean;
+
   /** Handler that is called when the value of the slider changes */
   onChange?: (value: number) => void;
 
