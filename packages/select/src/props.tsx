@@ -20,7 +20,7 @@ export type SelectProps = {
   disabled?: boolean;
 
   /**  Renders the field in a read-only state.*/
-  readonly?: boolean;
+  readOnly?: boolean;
 
   /** The content to display as the help text. */
   hint?: React.ReactNode;
