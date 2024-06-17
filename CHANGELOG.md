@@ -1,3 +1,10 @@
+# [1.6.0-next.5](https://github.com/warp-ds/react/compare/v1.6.0-next.4...v1.6.0-next.5) (2024-06-17)
+
+
+### Bug Fixes
+
+* bump core to fix slider ([#250](https://github.com/warp-ds/react/issues/250)) ([5192147](https://github.com/warp-ds/react/commit/5192147a4a4e43199b464793eb9a1eb56f504b91))
+
 # [1.6.0-next.4](https://github.com/warp-ds/react/compare/v1.6.0-next.3...v1.6.0-next.4) (2024-06-17)
 
 
