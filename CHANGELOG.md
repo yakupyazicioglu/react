@@ -1,3 +1,10 @@
+# [1.6.0-next.4](https://github.com/warp-ds/react/compare/v1.6.0-next.3...v1.6.0-next.4) (2024-06-17)
+
+
+### Bug Fixes
+
+* add default targetEl for callout ([#248](https://github.com/warp-ds/react/issues/248)) ([e297880](https://github.com/warp-ds/react/commit/e297880a9bac861e82e5a98facf9eaca3d0ec261))
+
 # [1.6.0-next.3](https://github.com/warp-ds/react/compare/v1.6.0-next.2...v1.6.0-next.3) (2024-06-12)
 
 
