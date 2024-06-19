@@ -74,11 +74,11 @@ function Select(props: SelectProps, ref: React.Ref<HTMLSelectElement>) {
   const { attrs, wrapperClasses, selectClasses, selectWrapperClasses, helpTextClasses, chevronClasses } = setup({ ...props, id });
   const { div, label, select, help, optional } = attrs;
 
-    const handleKeyDown = (event) => {
-      if (props.readOnly && (event.key === ' ' || event.key === 'ArrowDown' || event.key === 'ArrowUp')) {
-        event.preventDefault();
-      }
-    };
+  const handleKeyDown = (event) => {
+    if (props.readOnly && (event.key === ' ' || event.key === 'ArrowDown' || event.key === 'ArrowUp')) {
+      event.preventDefault();
+    }
+  };
 
   return (
     <div className={wrapperClasses} {...div}>
@@ -99,7 +99,7 @@ function Select(props: SelectProps, ref: React.Ref<HTMLSelectElement>) {
         </label>
       )}
       <div className={selectWrapperClasses}>
-        <select ref={ref} {...select} className={selectClasses} onKeyDown={handleKeyDown}/>
+        <select ref={ref} {...select} className={selectClasses} onKeyDown={handleKeyDown} />
         <div className={classNames(chevronClasses)}>
           <IconChevronDown16 />
         </div>
