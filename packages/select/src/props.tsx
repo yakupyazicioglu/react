@@ -19,7 +19,7 @@ export type SelectProps = {
   /**  Renders the field in a disabled state.*/
   disabled?: boolean;
 
-  /**  Renders the field in a read-only state.*/
+  /**  Renders the field in a readonly state.*/
   readOnly?: boolean;
 
   /** The content to display as the help text. */
