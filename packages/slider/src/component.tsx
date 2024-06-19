@@ -24,15 +24,25 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
   const [position, setPosition] = useState(rest.value);
   const [dimensions, setDimensions] = useState({ left: 0, width: 0 });
   const [sliderPressed, setSliderPressed] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
-    onChange && onChange(value);
+    if (hasMounted) {
+      onChange && onChange(value);
+    }
   }, [value, onChange]);
 
   useEffect(() => {
-    if (sliderPressed) return;
-    onChangeAfter && onChangeAfter(value);
+    if (hasMounted) {
+      if (!sliderPressed) {
+        onChangeAfter && onChangeAfter(value);
+      }
+    }
   }, [onChangeAfter, sliderPressed, value]);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   const step = useMemo(() => rest.step || 1, [rest]);
 
