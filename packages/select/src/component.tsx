@@ -13,7 +13,7 @@ import { messages as fiMessages } from './locales/fi/messages.mjs';
 import { messages as nbMessages } from './locales/nb/messages.mjs';
 import type { SelectProps } from './props.js';
 
-const setup = (props) => {
+const setup = (props: SelectProps) => {
   const { className, invalid, id, hint, always, label, style, optional, readOnly, disabled, ...rest } = props;
 
   activateI18n(enMessages, nbMessages, fiMessages);
