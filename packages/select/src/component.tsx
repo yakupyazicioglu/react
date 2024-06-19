@@ -47,23 +47,19 @@ const setup = (props) => {
           : null,
     },
     wrapperClasses: classNames(ccSelect.wrapper, className),
-    selectClasses: classNames({
-      [ccSelect.base]: true,
+
+    selectClasses: classNames(ccSelect.base, {
       [ccSelect.default]: !invalid && !disabled && !readOnly,
       [ccSelect.invalid]: invalid,
       [ccSelect.disabled]: disabled,
       [ccSelect.readOnly]: readOnly,
     }),
-    selectWrapperClasses: classNames({
-      [ccSelect.selectWrapper]: true,
-    }),
-    helpTextClasses: classNames({
-      [ccHelpText.helpText]: true,
+
+    helpTextClasses: classNames(ccHelpText.helpText, {
       [ccHelpText.helpTextColor]: !invalid,
       [ccHelpText.helpTextColorInvalid]: invalid,
     }),
-    chevronClasses: classNames({
-      [ccSelect.chevron]: true,
+    chevronClasses: classNames(ccSelect.chevron, {
       [ccSelect.chevronDisabled]: disabled,
     }),
   };
@@ -71,7 +67,7 @@ const setup = (props) => {
 
 function Select(props: SelectProps, ref: React.Ref<HTMLSelectElement>) {
   const id = useId(props.id);
-  const { attrs, wrapperClasses, selectClasses, selectWrapperClasses, helpTextClasses, chevronClasses } = setup({ ...props, id });
+  const { attrs, wrapperClasses, selectClasses, helpTextClasses, chevronClasses } = setup({ ...props, id });
   const { div, label, select, help, optional } = attrs;
 
   const handleKeyDown = (event) => {
@@ -98,7 +94,7 @@ function Select(props: SelectProps, ref: React.Ref<HTMLSelectElement>) {
           )}
         </label>
       )}
-      <div className={selectWrapperClasses}>
+      <div className={ccSelect.selectWrapper}>
         <select ref={ref} {...select} className={selectClasses} onKeyDown={handleKeyDown} />
         <div className={classNames(chevronClasses)}>
           <IconChevronDown16 />
