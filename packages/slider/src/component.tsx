@@ -108,7 +108,7 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
     if (value === n) return;
     updateValue(n);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [position, rest.value, rest.step]);
+  }, [position, rest.value, rest.step, updateValue]);
 
   useEffect(() => {
     if (sliderPressed || position === rest.value || value === rest.value) {
