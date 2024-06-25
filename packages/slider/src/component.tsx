@@ -39,7 +39,6 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
       if (!sliderPressed) {
         onChangeAfter && onChangeAfter(value);
       }
-    setHasMounted(true);
     },
     [onChange, onChangeAfter, sliderPressed]
   );
