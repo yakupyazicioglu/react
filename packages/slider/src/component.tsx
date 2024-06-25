@@ -88,7 +88,7 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
   const sliderActiveStyle = useMemo(
     () => ({
       left: 0,
-      right: 100 - thumbPosition + "%",
+      right: 100 - thumbPosition + '%',
     }),
     [thumbPosition],
     [thumbPosition]
@@ -97,8 +97,9 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
   const transformValue = useMemo(getThumbTransform, [getThumbTransform]);
   const thumbStyles = useMemo(
     () => ({
-      transform: "translateX(" + transformValue + "px)",
+      transform: 'translateX(' + transformValue + 'px)',
     }),
+    [transformValue],
   );
 
   useEffect(() => {
@@ -147,8 +148,8 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
         ref={thumbRef}
         style={thumbStyles}
         aria-label={rest['aria-label']}
-        aria-label={rest["aria-label"]}
-        aria-labelledby={rest["aria-labelledby"]}
+        aria-label={rest['aria-label']}
+        aria-labelledby={rest['aria-labelledby']}
         aria-valuemin={min}
         aria-valuemax={max}
         aria-valuenow={value}
