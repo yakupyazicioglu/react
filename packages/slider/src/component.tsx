@@ -33,15 +33,12 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
 
   const updateValue = useCallback(
     (value: number) => {
-      console.log("updateValue", value);
-
       setValue(value);
       onChange && onChange(value);
 
       if (!sliderPressed) {
         onChangeAfter && onChangeAfter(value);
       }
-  useEffect(() => {
     setHasMounted(true);
     },
     [onChange, onChangeAfter, sliderPressed]
@@ -81,22 +78,28 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
 
   const { handleKeyDown, handleFocus, handleBlur, handleMouseDown, handleClick, getThumbPosition, getThumbTransform, getShiftedChange } =
     createHandlers({ props: { min, max, ...rest }, sliderState });
+    handleFocus,
+    handleBlur,
+    handleMouseDown,
+    handleClick,
+    getThumbPosition,
+  } = createHandlers({ props: { min, max, ...rest }, sliderState });
 
   const thumbPosition = useMemo(getThumbPosition, [getThumbPosition]);
   const sliderActiveStyle = useMemo(
     () => ({
       left: 0,
-      right: 100 - thumbPosition + '%',
+      right: 100 - thumbPosition + "%",
     }),
     [thumbPosition],
+    [thumbPosition]
   );
 
   const transformValue = useMemo(getThumbTransform, [getThumbTransform]);
   const thumbStyles = useMemo(
     () => ({
-      transform: 'translateX(' + transformValue + 'px)',
+      transform: "translateX(" + transformValue + "px)",
     }),
-    [transformValue],
   );
 
   useEffect(() => {
@@ -145,11 +148,11 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
         ref={thumbRef}
         style={thumbStyles}
         aria-label={rest['aria-label']}
-        aria-labelledby={rest['aria-labelledby']}
+        aria-label={rest["aria-label"]}
+        aria-labelledby={rest["aria-labelledby"]}
         aria-valuemin={min}
         aria-valuemax={max}
         aria-valuenow={value}
-        aria-valuetext={rest['aria-valuetext']}
         onMouseDown={(e) => {
           handleMouseDown(e as unknown as KeyboardEvent);
         }}
@@ -160,7 +163,8 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
         onFocus={handleFocus}
         onKeyDown={(e) => {
           handleKeyDown(e as unknown as KeyboardEvent);
-        }}></div>
+        }}
+      ></div>
     </div>
   );
 }
