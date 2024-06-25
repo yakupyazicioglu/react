@@ -91,7 +91,6 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
       right: 100 - thumbPosition + '%',
     }),
     [thumbPosition],
-    [thumbPosition]
   );
 
   const transformValue = useMemo(getThumbTransform, [getThumbTransform]);
@@ -148,11 +147,11 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
         ref={thumbRef}
         style={thumbStyles}
         aria-label={rest['aria-label']}
-        aria-label={rest['aria-label']}
         aria-labelledby={rest['aria-labelledby']}
         aria-valuemin={min}
         aria-valuemax={max}
         aria-valuenow={value}
+        aria-valuetext={rest['aria-valuetext']}
         onMouseDown={(e) => {
           handleMouseDown(e as unknown as KeyboardEvent);
         }}
