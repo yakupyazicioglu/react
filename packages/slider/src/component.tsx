@@ -1,4 +1,10 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
 import { classNames } from '@chbphone55/classnames';
 import { createHandlers, useDimensions } from '@warp-ds/core/slider';
@@ -24,25 +30,22 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
   const [position, setPosition] = useState(rest.value);
   const [dimensions, setDimensions] = useState({ left: 0, width: 0 });
   const [sliderPressed, setSliderPressed] = useState(false);
-  const [hasMounted, setHasMounted] = useState(false);
 
-  useEffect(() => {
-    if (hasMounted) {
+  const updateValue = useCallback(
+    (value: number) => {
+      console.log("updateValue", value);
+
+      setValue(value);
       onChange && onChange(value);
-    }
-  }, [value, onChange]);
 
-  useEffect(() => {
-    if (hasMounted) {
       if (!sliderPressed) {
         onChangeAfter && onChangeAfter(value);
       }
-    }
-  }, [onChangeAfter, sliderPressed, value]);
-
   useEffect(() => {
     setHasMounted(true);
-  }, []);
+    },
+    [onChange, onChangeAfter, sliderPressed]
+  );
 
   const step = useMemo(() => rest.step || 1, [rest]);
 
@@ -63,7 +66,7 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
       return value;
     },
     set val(v) {
-      setValue(v);
+      updateValue(v);
     },
     get thumbEl() {
       return thumbRef.current;
@@ -101,7 +104,7 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
     if (position === rest.value) return;
     const n = rest.step ? getShiftedChange(position) : position;
     if (value === n) return;
-    setValue(n);
+    updateValue(n);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [position, rest.value, rest.step]);
 
