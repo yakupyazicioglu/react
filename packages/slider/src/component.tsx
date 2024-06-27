@@ -1,10 +1,4 @@
-import React, {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { classNames } from '@chbphone55/classnames';
 import { createHandlers, useDimensions } from '@warp-ds/core/slider';
@@ -40,7 +34,7 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
         onChangeAfter && onChangeAfter(value);
       }
     },
-    [onChange, onChangeAfter, sliderPressed]
+    [onChange, onChangeAfter, sliderPressed],
   );
 
   const step = useMemo(() => rest.step || 1, [rest]);
@@ -77,12 +71,6 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
 
   const { handleKeyDown, handleFocus, handleBlur, handleMouseDown, handleClick, getThumbPosition, getThumbTransform, getShiftedChange } =
     createHandlers({ props: { min, max, ...rest }, sliderState });
-    handleFocus,
-    handleBlur,
-    handleMouseDown,
-    handleClick,
-    getThumbPosition,
-  } = createHandlers({ props: { min, max, ...rest }, sliderState });
 
   const thumbPosition = useMemo(getThumbPosition, [getThumbPosition]);
   const sliderActiveStyle = useMemo(
@@ -162,8 +150,7 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
         onFocus={handleFocus}
         onKeyDown={(e) => {
           handleKeyDown(e as unknown as KeyboardEvent);
-        }}
-      ></div>
+        }}></div>
     </div>
   );
 }
