@@ -141,9 +141,15 @@ export function Slider({ min = 0, max = 100, ...rest }: SliderProps) {
         aria-valuenow={value}
         aria-valuetext={rest['aria-valuetext']}
         onMouseDown={(e) => {
+          const clientX = e.clientX || 0;
+          const newPosition = clientX;
+          setPosition(newPosition);
           handleMouseDown(e as unknown as KeyboardEvent);
         }}
         onTouchStart={(e) => {
+          const clientX = e.touches[0]?.clientX || 0;
+          const newPosition = clientX;
+          setPosition(newPosition);
           handleMouseDown(e as unknown as KeyboardEvent);
         }}
         onBlur={handleBlur}
